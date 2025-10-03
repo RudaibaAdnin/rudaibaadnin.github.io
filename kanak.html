@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kanak — Web Tool for Accessible STEM Materials</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Reuse your existing theme -->
+    <link rel="stylesheet" href="lessonA11y.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <h1>Kanak</h1>
+          <p class="subtitle">
+            Automating Visual-to-Accessible STEM Materials with
+            Human-in-the-Loop Intervention
+          </p>
+        </div>
+        <nav class="nav">
+          <a href="portfolio.html">
+            <i class="fa fa-arrow-left"></i> Back to Portfolio
+          </a>
+          <a href="#overview">Overview</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#features">Features</a>
+          <a href="#architecture">Architecture</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Overview -->
+    <section id="overview" class="section">
+      <div class="container narrow">
+        <h2>Overview</h2>
+        <p>
+          <em>Kanak</em> is a web-based tool that streamlines the process of
+          converting visual educational materials (e.g., SAT worksheets,
+          handouts, quizzes) into accessible formats such as BRF (braille) and
+          DOCX for screen reader access. It combines automation with
+          human-in-the-loop editing so accessibility practitioners can quickly
+          review, correct, and finalize content for blind and low-vision (BLV)
+          learners.
+        </p>
+
+        <div class="key-points">
+          <div class="kp">
+            <i class="fa-solid fa-bullseye kp-icon" aria-hidden="true"></i>
+            <p>
+              <strong>Goal:</strong> End-to-end visual-to-accessible
+              transcription with inline editing across content types (text,
+              math, tables, graphics).
+            </p>
+          </div>
+          <div class="kp">
+            <i
+              class="fa-solid fa-graduation-cap kp-icon"
+              aria-hidden="true"
+            ></i>
+            <p>
+              <strong>Use Case:</strong> SAT test prep materials, designed for
+              practitioners and TVIs supporting BLV students.
+            </p>
+          </div>
+          <div class="kp">
+            <i class="fa-solid fa-puzzle-piece kp-icon" aria-hidden="true"></i>
+            <p>
+              <strong>Approach:</strong> Document parsing, computer vision,
+              structured extraction, and cross-platform export.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow (screens) -->
+    <section id="workflow" class="section alt">
+      <div class="container">
+        <h2>Workflow Screens</h2>
+        <p class="narrow">
+          Kanak supports an upload–extract–edit–export flow with focused editors
+          for text, math, tables, and graphics.
+        </p>
+
+        <!-- Row 1 -->
+        <div class="grid gallery-2">
+          <figure>
+            <img src="images/login2.png" alt="User login page" loading="lazy" />
+            <figcaption>Login</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/dashboard2.png"
+              alt="Dashboard page"
+              loading="lazy"
+            />
+            <figcaption>Dashboard</figcaption>
+          </figure>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="grid gallery-2">
+          <figure>
+            <img
+              src="images/upload2.png"
+              alt="Document upload page"
+              loading="lazy"
+            />
+            <figcaption>Upload Documents</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/extract2.png"
+              alt="Content preview and editing page"
+              loading="lazy"
+            />
+            <figcaption>Content Extraction &amp; Preview</figcaption>
+          </figure>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="grid gallery-2">
+          <figure>
+            <img
+              src="images/tableeditor2.png"
+              alt="Table editor page for spreadsheet-like editing"
+              loading="lazy"
+            />
+            <figcaption>Table Editor</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/last2.png"
+              alt="Output download page showing export formats"
+              loading="lazy"
+            />
+            <figcaption>Export Outputs</figcaption>
+          </figure>
+        </div>
+
+        <p class="small" style="text-align: center; margin-top: 10px">
+          Steps of Kanak’s workflow: (a)–(f)
+        </p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Tool Design &amp; Features</h2>
+
+        <div class="feature-grid">
+          <!-- Feature 1 -->
+          <article class="feature">
+            <h3>
+              <span class="dot"></span>Dynamic Visual-to-Tactile Transcribing
+            </h3>
+            <p>
+              Upload scanned PDFs to automatically extract textual,
+              mathematical, tabular, and graphical content into editable blocks.
+              Edit directly in the browser and rearrange blocks for custom flow.
+            </p>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="feature">
+            <h3>
+              <span class="dot"></span>Inline Editing Across Content Types
+            </h3>
+            <p>
+              Use specialized editors for each content type—text editor, math
+              equation editor, spreadsheet-like table editor, and a graphics
+              editor for adjusting labels, axes, and structure.
+            </p>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="feature">
+            <h3><span class="dot"></span>Custom Graphic Redrawing</h3>
+            <p>
+              When automated extraction is imperfect, redraw or revise graphics
+              with built-in tools (shapes, lines, styles) to ensure tactile
+              interpretability for BLV students.
+            </p>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="feature">
+            <h3><span class="dot"></span>Multi-Format Accessible Output</h3>
+            <p>
+              Export BRF for braille devices and embossers, and DOCX for further
+              editing/screen reader access. Supports Nemeth code for math and
+              optional contracted braille.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section id="architecture" class="section alt">
+      <div class="container narrow">
+        <h2>Prototype Architecture</h2>
+        <p>
+          Kanak uses a modular pipeline with a ReactJS frontend and NodeJS
+          backend, leveraging computer vision and deep learning to structure
+          content for non-visual access.
+        </p>
+
+        <ul class="card" style="list-style: none; padding-left: 16px">
+          <li style="margin-bottom: 8px">
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+            <strong> Pre-Processor:</strong> Extracts text and images from PDFs
+            for modular processing.
+          </li>
+          <li style="margin-bottom: 8px">
+            <i class="fa-solid fa-font" aria-hidden="true"></i>
+            <strong> Text Processor:</strong> Parses, formats, and semantically
+            classifies text for non-visual consumption.
+          </li>
+          <li style="margin-bottom: 8px">
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+            <strong> Graphic Processor:</strong> Uses CV (e.g., OpenCV EAST) to
+            isolate charts/diagrams and convert them into structured spatial
+            objects.
+          </li>
+          <li style="margin-bottom: 8px">
+            <i class="fa-solid fa-braille" aria-hidden="true"></i>
+            <strong> Reconstruction Module:</strong> Translates spatial objects
+            into perceptually optimized tactile/braille representations
+            following BANA guidance.
+          </li>
+          <li>
+            <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+            <strong> Cross-Platform Delivery:</strong> Compiles BRF, tagged
+            HTML, and other outputs for embossers, braille displays, screen
+            readers, and mobile devices.
+          </li>
+        </ul>
+
+        <p class="small" style="margin-top: 10px">
+          Underlying models and backend services are proprietary to UNAR Labs.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; 2025 Rudaiba Adnin</p>
+      </div>
+    </footer>
+  </body>
+</html>
