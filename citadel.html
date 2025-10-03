@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Citadel — Automated Abuse Detection for Email</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Reuse your existing theme -->
+    <link rel="stylesheet" href="lessonA11y.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <h1>Citadel</h1>
+          <p class="subtitle">
+            Automated Abuse Detection for Email with User-Controlled Privacy
+          </p>
+        </div>
+        <nav class="nav">
+          <a href="portfolio.html">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to
+            Portfolio
+          </a>
+          <a href="#overview">Overview</a>
+          <a href="#findings">Findings</a>
+          <a href="#features">Features</a>
+          <a href="#implementation">Implementation</a>
+          <a href="#evaluation">Evaluation</a>
+          <a href="#privacy">Privacy &amp; Control</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Overview -->
+    <section id="overview" class="section">
+      <div class="container narrow">
+        <h2>Overview</h2>
+        <p>
+          <em>Citadel</em> is a Chrome extension for Gmail that detects abusive
+          emails and helps users take action while preserving privacy. The
+          design is grounded in prior literature and a mixed-methods study
+          (interviews + survey) examining user preferences for moderation
+          approaches and privacy concerns regarding human vs. automated systems.
+        </p>
+
+        <div class="key-points">
+          <div class="kp">
+            <i
+              class="fa-solid fa-envelope-open-text kp-icon"
+              aria-hidden="true"
+            ></i>
+            <p>
+              <strong>Platform:</strong> Chrome extension for Gmail,
+              permission-based install; no storage of personal emails on our
+              servers.
+            </p>
+          </div>
+          <div class="kp">
+            <i class="fa-solid fa-sliders kp-icon" aria-hidden="true"></i>
+            <p>
+              <strong>Control:</strong> Threshold-per-sender, block lists, and
+              “accurate / inaccurate” feedback loops.
+            </p>
+          </div>
+          <div class="kp">
+            <i class="fa-solid fa-people-arrows kp-icon" aria-hidden="true"></i>
+            <p>
+              <strong>Support:</strong> Notification window + “Contact Trusted
+              People” for quick outreach after detection.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Findings -->
+    <section id="findings" class="section alt">
+      <div class="container narrow">
+        <h2>Key Findings from Prior &amp; Recent Studies</h2>
+        <p class="lede">
+          Preferences for moderation approaches and privacy concerns informed
+          Citadel’s design.
+        </p>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <h3><span class="dot"></span>Interview Study Preferences</h3>
+            <p>
+              40% preferred automated moderation, 53% preferred a combined
+              automated + human approach, and 7% preferred human-only
+              moderation. A chi-square test indicated significant differences in
+              privacy concern between human-only and automated conditions.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3><span class="dot"></span>Survey Preferences</h3>
+            <p>
+              51% preferred combined moderation, 41% automated, and 8%
+              human-only—mirroring interview trends with strong privacy concerns
+              tied to human moderation.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3><span class="dot"></span>Platform Usage</h3>
+            <p>
+              Gmail was the primary email platform for participants (≈93% in
+              interviews; ≈89% in survey), motivating a Chrome extension
+              delivery.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Feature Identification</h2>
+        <div class="feature-grid">
+          <article class="feature">
+            <h3><span class="dot"></span>Show in Notification Window</h3>
+            <p>
+              Abusive emails surface in an accessible notification pane with
+              severity indicators, keeping the inbox uncluttered.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3><span class="dot"></span>Contact Trusted People</h3>
+            <p>
+              One-click outreach to pre-selected contacts (friends/relatives)
+              when support is needed after detection.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3><span class="dot"></span>Threshold per Sender</h3>
+            <p>
+              Users tune tolerance levels per sender; feedback (“Accurate?” /
+              “Inaccurate?”) adaptively adjusts thresholds over time.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3><span class="dot"></span>Block Contact</h3>
+            <p>
+              Instantly block a sender; future emails are moved to trash and
+              kept out of the inbox. Manage block lists in the settings view.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Implementation -->
+    <section id="implementation" class="section alt">
+      <div class="container">
+        <h2>Implementation</h2>
+
+        <div
+          class="grid"
+          style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))"
+        >
+          <article class="card">
+            <div class="card-hd">
+              <span class="badge">Backend</span>
+              <h3>Engine</h3>
+            </div>
+            <p>
+              Deep neural network (CNN + LSTM + dense layers) detects abusive
+              content. A secure database stores user profile &amp; trusted
+              contact metadata—<em>never</em> personal emails.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-hd">
+              <span class="badge">Data</span>
+              <h3>Training</h3>
+            </div>
+            <p>
+              Due to privacy constraints around email storage, training used the
+              Kaggle Jigsaw toxic comment dataset (159,571 items; labels: toxic,
+              severe toxic, obscene, threat, insult, identity hate).
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-hd">
+              <span class="badge">Model</span>
+              <h3>Architecture</h3>
+            </div>
+            <p>
+              Inception-inspired convolutional branch + LSTM for long-range
+              dependencies; character- and word-level inputs to handle context
+              and misspellings. Test accuracy: ~98.4% on a 9,571-item split.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-hd">
+              <span class="badge">Frontend</span>
+              <h3>Chrome Extension</h3>
+            </div>
+            <p>
+              Works within Gmail (with user permission). Shows notifications
+              with severity, “Ask for help!”, “Block Contact”, and
+              sender-threshold feedback controls.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Evaluation (figures) -->
+    <section id="evaluation" class="section">
+      <div class="container">
+        <h2>Design Iterations</h2>
+        <p class="narrow">
+          Citadel went through two iterations. The first design validated demand
+          for notifications and trusted contacts. The second introduced
+          sender-specific thresholds and blocking, based on insights that some
+          users tolerate language from friends but not strangers.
+        </p>
+
+        <!-- Replace src paths with your actual assets if you export PNGs -->
+        <figure class="wide">
+          <img
+            src="images/flow1.png"
+            alt="System flow and notification window, first design"
+            loading="lazy"
+          />
+          <figcaption>First design: flow &amp; UI.</figcaption>
+        </figure>
+
+        <figure class="wide">
+          <img
+            src="images/flow2.png"
+            alt="System flow and notification window, second design"
+            loading="lazy"
+          />
+          <figcaption>Second design: sender thresholds &amp; UI.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Privacy & Control -->
+    <section id="privacy" class="section alt">
+      <div class="container narrow">
+        <h2>Privacy &amp; User Control</h2>
+        <ul class="card" style="list-style: none; padding-left: 16px">
+          <li style="margin-bottom: 8px">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            <strong> No email storage:</strong> Personal emails are not saved on
+            our servers; models run on extracted text features only for
+            classification.
+          </li>
+          <li style="margin-bottom: 8px">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            <strong> Adaptive thresholds:</strong> “Accurate / Inaccurate”
+            feedback tunes per-sender sensitivity without dropping below a
+            safe-minimum.
+          </li>
+          <li style="margin-bottom: 8px">
+            <i class="fa-solid fa-user-lock" aria-hidden="true"></i>
+            <strong> Block management:</strong> Users can add/remove blocked
+            contacts; messages from blocked senders are trashed automatically.
+          </li>
+          <li>
+            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+            <strong> Trusted contacts:</strong> Quick “Ask for help!” outreach
+            after detection.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; 2025 Rudaiba Adnin</p>
+      </div>
+    </footer>
+  </body>
+</html>
