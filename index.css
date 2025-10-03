@@ -544,3 +544,27 @@ main a:hover,
 .footer-links a:hover {
   text-decoration: underline;
 }
+
+.portfolio-grid {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.portfolio-grid a {
+  text-decoration: underline;
+}
+
+main.section {
+  margin-left: 80px; /* adjust value as you like */
+  margin-right: 60px; /* optional, for balance */
+}
+
+main.section h2,
+main.section p,
+main.section ul {
+  text-align: left; /* ensure text stays left-aligned */
+}

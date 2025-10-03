@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LessonA11y — Design Iteration & Prototyping</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome (optional, for small icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="lessonA11y.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <h1>LessonA11y</h1>
+          <p class="subtitle">
+            Design Iteration &amp; Prototyping for Blind TVIs
+          </p>
+        </div>
+        <nav class="nav">
+          <a href="portfolio.html">
+            <i class="fa fa-arrow-left"></i> Back to Portfolio
+          </a>
+          <a href="#overview">Overview</a>
+          <a href="#goals">Design Goals</a>
+          <a href="#ideation">Ideation</a>
+          <a href="#prototype">Prototype</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Overview / Intro -->
+    <section id="overview" class="section">
+      <div class="container narrow">
+        <h2>Overview</h2>
+        <p>
+          <em>LessonA11y</em> is a web-based concept and prototype designed to
+          support blind teachers of students with visual impairments (TVIs) in
+          planning lessons, making materials accessible, and staying informed
+          about software/tools they rely on. This page summarizes the design
+          goals, ideation journey, and prototype implementation.
+        </p>
+
+        <div class="key-points">
+          <div class="kp">
+            <i class="fa-solid fa-bullseye kp-icon" aria-hidden="true"></i>
+            <p>
+              <strong>Focus:</strong> Accessibility in lesson planning, material
+              preparation, and technology updates.
+            </p>
+          </div>
+
+          <div class="kp">
+            <i
+              class="fa-solid fa-chalkboard-user kp-icon"
+              aria-hidden="true"
+            ></i>
+            <p>
+              <strong>Users:</strong> Blind TVIs and their collaborators (e.g.,
+              Teaching Assistants).
+            </p>
+          </div>
+
+          <div class="kp">
+            <i class="fa-solid fa-puzzle-piece kp-icon" aria-hidden="true"></i>
+            <p>
+              <strong>Approach:</strong> Storyboarding, low-fi sketches, and an
+              HTML + Bootstrap prototype.
+            </p>
+          </div>
+        </div>
+
+        <blockquote class="pullquote" aria-label="Participant quote">
+          “If I know I have an IEP coming at a certain time, I start a month in
+          advance… If I don’t do it like that, it just hits me, and then I
+          panic, and I don’t get anything done.”
+        </blockquote>
+
+        <p class="ref small">
+          Insights from prior work: Okungu et al., 2019; Brewer et al., 2023.
+        </p>
+      </div>
+    </section>
+
+    <!-- Design Goals -->
+    <section id="goals" class="section alt">
+      <div class="container narrow">
+        <h2>Design Goals</h2>
+        <p class="lede">
+          From the needs of blind TVIs and prior literature, we articulated four
+          design goals (DGs).
+        </p>
+
+        <div class="grid goals">
+          <!-- DG1 -->
+          <article class="card">
+            <div class="card-hd">
+              <span class="badge">DG1</span>
+              <h3>Planning Lessons</h3>
+            </div>
+            <p>
+              Provide an accessible interface to
+              <strong>organize lesson plans and materials efficiently</strong>.
+              Recommend accessible tools for students with visual impairments,
+              notify users about tool updates, and support requesting assistance
+              from TAs when needed.
+            </p>
+          </article>
+
+          <!-- DG2 -->
+          <article class="card">
+            <div class="card-hd">
+              <span class="badge">DG2</span>
+              <h3>Making Materials Accessible</h3>
+            </div>
+            <p>
+              <strong>Automate accessibility processing</strong> for documents
+              and media: add alt text, tag PDFs, and assist with image
+              descriptions via AI to reduce prep time and cognitive load.
+            </p>
+          </article>
+
+          <!-- DG3 -->
+          <article class="card">
+            <div class="card-hd">
+              <span class="badge">DG3</span>
+              <h3>Staying Updated on Tools</h3>
+            </div>
+            <p>
+              Provide access to
+              <strong>reviews and experiences from other blind TVIs</strong>
+              about software updates and new tools so teachers can anticipate
+              issues and integrate technology confidently.
+            </p>
+          </article>
+
+          <!-- DG4 -->
+          <article class="card">
+            <div class="card-hd">
+              <span class="badge">DG4</span>
+              <h3>Communication with TAs</h3>
+            </div>
+            <p>
+              Enable clear <strong>task-sharing and communication</strong> with
+              teaching assistants grounded in the concept of interdependence,
+              including delegating accessibility tasks for upcoming lessons.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ideation -->
+    <section id="ideation" class="section">
+      <div class="container">
+        <h2>Ideation Process</h2>
+        <p class="narrow">
+          We storyboarded a typical day for a blind TVI, explored multiple
+          low-fidelity sketches, and synthesized ideas via affinity diagramming.
+          Voice-only concepts were set aside to prioritize robust screen reader
+          workflows now, while keeping room for optional voice features later.
+        </p>
+
+        <figure class="wide">
+          <img
+            src="images/storyboard.jpg"
+            alt="Storyboard frames illustrating pre-class review, TA collaboration, and proactive software update notifications."
+            loading="lazy"
+          />
+          <figcaption>Storyboard guiding our design process.</figcaption>
+        </figure>
+
+        <div class="grid sketches-3">
+          <figure>
+            <img
+              src="images/sketch1.jpg"
+              alt="Sketch 1: multi-page layout for features navigated from a home screen."
+              loading="lazy"
+            />
+            <figcaption>
+              Sketch 1 — Dedicated pages for each feature.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/sketch2.jpg"
+              alt="Sketch 2: lesson planning focus with alert cues for accessibility or new software."
+              loading="lazy"
+            />
+            <figcaption>
+              Sketch 2 — Lesson plan with accessibility &amp; update alerts.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/sketch3.jpg"
+              alt="Sketch 3: conversational assistant concept to answer questions based on prior inputs."
+              loading="lazy"
+            />
+            <figcaption>Sketch 3 — Voice assistant concept.</figcaption>
+          </figure>
+        </div>
+
+        <div class="grid sketches-2">
+          <figure>
+            <img
+              src="images/sketch4.jpg"
+              alt="Sketch 4: calendar-like list of lesson plans organized by date and time blocks."
+              loading="lazy"
+            />
+            <figcaption>Sketch 4 — Time-block lesson planning.</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/sketch5.jpg"
+              alt="Sketch 5: notes-style layout with auto-detected software mentions and updates."
+              loading="lazy"
+            />
+            <figcaption>
+              Sketch 5 — Notes-style tool &amp; updates extraction.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prototype -->
+    <section id="prototype" class="section alt">
+      <div class="container">
+        <h2>Prototype Implementation</h2>
+        <p class="narrow">
+          We prototyped <em>LessonA11y</em> with HTML and Bootstrap. The
+          prototype demonstrates three flows: <strong>Lesson Planning</strong>,
+          <strong>Make Materials Accessible</strong>, and
+          <strong>Learn about Software</strong>. Live site:
+          <a href="https://cs7390.netlify.app" target="_blank" rel="noopener"
+            >cs7390.netlify.app</a
+          >
+          · Video demo:
+          <a
+            href="https://drive.google.com/file/d/1h2Uh_g0lFphIL5aYWv5ZfsjeFtYN08fx/view?usp=sharing"
+            target="_blank"
+            rel="noopener"
+            >Google Drive</a
+          >.
+        </p>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <h3><span class="dot"></span>Lesson Planning</h3>
+            <p>
+              Add and organize tasks with titles, descriptions, and associated
+              tools/materials. Check for tool updates and accessibility needs
+              (announced via <code>aria-live</code>) and optionally send plans
+              to a TA.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3><span class="dot"></span>Making Materials Accessible</h3>
+            <p>
+              Generate accessibility reports, auto-create alt text, tag PDFs, or
+              route items to a TA. The prototype showcases a template flow to
+              illustrate interactions and outcomes.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3><span class="dot"></span>Staying Informed About Software</h3>
+            <p>
+              Read and write reviews from other blind TVIs about software and
+              updates, helping teachers anticipate changes and adopt tools more
+              confidently.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2>Interface Gallery</h2>
+
+        <div class="grid gallery-2">
+          <figure>
+            <img
+              src="images/home.png"
+              alt="LessonA11y home page UI."
+              loading="lazy"
+            />
+            <figcaption>Home page</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/makematerialsaccessible.png"
+              alt="UI for making materials accessible."
+              loading="lazy"
+            />
+            <figcaption>Make Materials Accessible</figcaption>
+          </figure>
+        </div>
+
+        <div class="grid gallery-2">
+          <figure>
+            <img
+              src="images/lessonplan1.png"
+              alt="Viewing items in Lesson Planning."
+              loading="lazy"
+            />
+            <figcaption>Lesson Planning — view items</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/lessonplan2.png"
+              alt="Adding new tasks in Lesson Planning."
+              loading="lazy"
+            />
+            <figcaption>Lesson Planning — add tasks</figcaption>
+          </figure>
+        </div>
+
+        <div class="grid gallery-2">
+          <figure>
+            <img
+              src="images/review1.png"
+              alt="Viewing reviews in Learn about Software."
+              loading="lazy"
+            />
+            <figcaption>Learn about Software — reviews</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/review2.png"
+              alt="Adding a new review in Learn about Software."
+              loading="lazy"
+            />
+            <figcaption>Learn about Software — add review</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; 2025 Rudaiba Adnin</p>
+      </div>
+    </footer>
+  </body>
+</html>
