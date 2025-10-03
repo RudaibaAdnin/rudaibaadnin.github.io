@@ -1,0 +1,514 @@
+/* General reset */
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px; /* All text 24px */
+  background-color: #ffffff;
+  color: #5d3754; /* Purple text */
+  line-height: 1.6;
+  font-weight: 400; /* no bold */
+}
+section {
+  scroll-margin-top: 250px; /* adjust to navbar height */
+}
+
+/* Header
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+} */
+
+/* Make header sticky */
+header {
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background: #ffffff; /* keep background solid when scrolling */
+  z-index: 1000; /* make sure it stays above other sections */
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+header h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 400;
+  text-decoration: underline; /* Permanent underline */
+}
+
+header h2 {
+  font-weight: 400;
+  margin: 0.5rem 0 1.5rem 0;
+  font-size: 24px;
+}
+
+/* Navbar */
+.navbar {
+  list-style: none;
+  padding: 0.8rem 0;
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  border-top: 1px solid #5d3754; /* Thin line above */
+  border-bottom: 1px solid #5d3754; /* Thin line below */
+}
+
+.navbar li {
+  font-size: 24px;
+}
+
+.navbar a {
+  color: #5d3754;
+  text-decoration: none; /* No underline by default */
+  font-weight: 400;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.navbar a:hover {
+  color: #3c2436; /* Darker purple */
+  text-decoration: underline; /* Underline on hover */
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background: #ffffff; /* white background to cover content behind */
+  z-index: 1000; /* stay on top */
+  border-bottom: 1px solid #ccc; /* subtle divider */
+}
+
+/* optional: style links inside */
+.sticky-nav .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  list-style: none;
+}
+
+.sticky-nav .navbar a {
+  text-decoration: none;
+  color: #3c2436;
+}
+.sticky-nav .navbar a.active {
+  background: #3c2436; /* purple background */
+  color: #fff; /* white text */
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+}
+
+.sticky-nav .navbar a:hover {
+  background: #3c2436;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  border-bottom: 1px solid #5d3754;
+  font-size: 24px;
+}
+
+/* Add top spacing above the profile image */
+.about-img {
+  margin-top: 2rem; /* tweak as needed: 0.5rem–2rem */
+}
+
+/* Optional: reduce the top margin on wider screens */
+@media (min-width: 768px) {
+  .about-img {
+    margin-top: 1rem;
+  }
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+  font-size: 24px;
+}
+
+.about-text h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+/* News Section */
+.news {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 2rem 1.5rem;
+  border-bottom: 1px solid #5d3754;
+  font-size: 24px;
+}
+
+.news h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-align: center; /* only title centered */
+  margin-bottom: 1rem;
+}
+
+/* Publications Section */
+.pubs {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 2rem 1.5rem;
+  border-bottom: 1px solid #5d3754;
+  font-size: 24px;
+}
+
+.pubs h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-align: center; /* only title centered */
+  margin-bottom: 1rem;
+}
+
+/* Filter buttons */
+.filter-buttons {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.filter-buttons button {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  margin: 0.3rem 0.5rem;
+  padding: 0.4rem 1.2rem;
+  border: 1px solid #5d3754;
+  background: #ffffff;
+  color: #5d3754;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover + Active state */
+.filter-buttons button:hover,
+.filter-buttons button.active {
+  background: #5d3754;
+  color: #ffffff;
+}
+
+/* Publication list reset */
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each publication card */
+.pub-card {
+  border: 1px solid #5d3754;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+  background-color: #faf9fb;
+  box-shadow: 0 4px 8px rgba(93, 55, 84, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 22px;
+}
+.pub-card .meta {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 18px;
+}
+
+/* Hover effect */
+.pub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 14px rgba(93, 55, 84, 0.2);
+  background-color: #fff;
+}
+
+.highlight {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #5d3754;
+}
+
+/* Links inside publications */
+.pub-card a {
+  color: #5d3754;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 0.4rem;
+}
+
+.pub-card a:hover {
+  text-decoration: underline;
+  color: #3c2436;
+}
+
+/* All other links */
+main a,
+.news a,
+.pubs a,
+.about a {
+  text-decoration: underline;
+  color: #5d3754;
+  font-weight: 500;
+}
+
+main a:hover,
+.news a:hover,
+.pubs a:hover,
+.about a:hover {
+  color: #3c2436;
+}
+
+/* Education Section */
+.education {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 2rem 1.5rem;
+  border-bottom: 1px solid #5d3754;
+  font-size: 24px;
+}
+
+.education h2 {
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 80px;
+}
+
+/* Education Section */
+.education {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 2rem 1.5rem;
+  border-bottom: 1px solid #5d3754;
+  font-size: 24px;
+}
+
+.education h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Education list */
+.edu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.edu-list li {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.edu-date {
+  font-style: italic;
+  font-size: 20px;
+  color: #5d3754;
+}
+
+/* Experience Section */
+.experience {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 2rem 1.5rem;
+  border-bottom: 1px solid #5d3754;
+  font-size: 24px;
+}
+
+.experience h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.exp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exp-list > li {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.exp-date {
+  font-style: italic;
+  font-size: 20px;
+  color: #5d3754;
+}
+
+/* Experience details bullets */
+.exp-details {
+  list-style: none; /* remove default bullets */
+  margin: 0.6rem 0 0 0.5rem;
+  padding: 0;
+  font-size: 22px;
+}
+
+.exp-details li {
+  position: relative;
+  margin-bottom: 0.6rem;
+  padding-left: 1.8rem; /* spacing for custom bullet */
+  line-height: 1.6;
+}
+
+/* Custom purple bullets */
+.exp-details li::before {
+  content: "●"; /* solid circle */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5d3754; /* your purple theme */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Skills Section */
+.skills {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 2rem 1.5rem;
+  border-bottom: 1px solid #5d3754;
+  font-size: 24px;
+}
+
+.skills h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+/* Subtle decorative bullet */
+.skills-list li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5d3754;
+  font-size: 14px;
+}
+
+/* Bold + colored category names */
+.skill-category {
+  font-weight: 600;
+  color: #5d3754;
+}
+
+/* Awards Section */
+.awards {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 2rem 1.5rem;
+  border-bottom: 1px solid #5d3754;
+  font-size: 24px;
+}
+
+.awards h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.awards-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.awards-list li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+/* Subtle decorative bullet */
+.awards-list li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5d3754;
+  font-size: 14px;
+}
+
+.award-date {
+  /* float: right; */
+  font-style: italic;
+  font-size: 20px;
+  color: #5d3754;
+}
+
+.awards i {
+  font-size: 20px;
+}
+
+.site-footer {
+  background: #5d3754;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+}
+
+.site-footer p {
+  margin: 0 0 0.8rem;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

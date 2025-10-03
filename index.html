@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rudaiba Adnin's Personal Website</title>
+
+    <!-- Google Fonts: Raleway -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1 class="highlight">Rudaiba Adnin</h1>
+      <h2><i>CS Ph.D. Candidate at Northeastern University</i></h2>
+      <nav>
+        <ul class="navbar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li>|</li>
+          <li>
+            <a
+              href="https://rudaibaadnin.github.io/publications/CV_RUDAIBA_ADNIN.pdf"
+              target="_blank"
+              aria-label="Download CV"
+              >CV</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://scholar.google.com/citations?user=0uZSDBQAAAAJ&hl=en"
+              target="_blank"
+              aria-label="Google Scholar profile"
+              >Google Scholar</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/rudaiba-adnin-153b551b6/"
+              target="_blank"
+              aria-label="LinkedIn profile"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://orcid.org/0000-0003-0753-7858"
+              target="_blank"
+              aria-label="ORCID profile"
+              >ORCID</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/RudaibaAdnin"
+              target="_blank"
+              aria-label="Twitter profile"
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a href="#" aria-label="Blogs">Blogs</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- About Section -->
+    <main>
+      <section class="about">
+        <div class="about-img">
+          <img src="rudaiba.png" alt="Photo of Rudaiba Adnin" />
+        </div>
+        <div class="about-text">
+          <h2>ABOUT ME</h2>
+          <p>
+            I am a third-year Ph.D. student at
+            <a
+              href="https://www.khoury.northeastern.edu/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit Northeastern University Khoury College of Computer Sciences"
+            >
+              Northeastern University Khoury College of Computer Sciences </a
+            >. I work in the
+            <a
+              href="https://tealab.sites.northeastern.edu/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit Technology, Equity, and Accessibility Lab"
+            >
+              Technology, Equity, and Accessibility (TEA) Lab </a
+            >. My advisor is
+            <a
+              href="https://maitraye.github.io/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit Professor Maitraye Das's Profile"
+            >
+              Prof. Maitraye Das </a
+            >.
+          </p>
+          <p>
+            My research focuses on the intersection of Human-Computer
+            Interaction (HCI), Computer-Supported Cooperative Work (CSCW), and
+            Accessible Computing. I aim to develop accessible learning and
+            collaborative technologies for disabled individuals. Currently, I am
+            studying the accessibility of recent GenAI-powered tools from the
+            perspective of blind and low-vision individuals.
+          </p>
+          <p><strong>Pronouns:</strong> She/Her</p>
+          <p>
+            <strong>Email Address:</strong>
+            <a
+              href="mailto:adnin.r@northeastern.edu"
+              aria-label="Email Rudaiba Adnin"
+            >
+              adnin.r@northeastern.edu
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <!-- Recent News -->
+      <section class="news">
+        <h2>RECENT NEWS</h2>
+        <p>
+          [2025/01] Our paper
+          <a href="#">Hallucinated Use of Generative AI</a> accepted at CHI
+          2025!
+        </p>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="education">
+        <h2>EDUCATION</h2>
+        <ul class="edu-list">
+          <li>
+            <strong>Ph.D. in Computer Science</strong>
+            <span class="edu-date">Sept 2023</span><br />
+            Khoury College of Computer Sciences, Northeastern University,
+            Boston, MA, USA
+            <br /><em>Advisor: Prof. Maitraye Das</em>
+          </li>
+
+          <li>
+            <strong>M.S. in Computer Science</strong>
+            <span class="edu-date">Sept 2023 – Aug 2025</span><br />
+            Khoury College of Computer Sciences, Northeastern University,
+            Boston, MA, USA
+            <br /><em>Advisor: Prof. Maitraye Das</em>
+          </li>
+
+          <li>
+            <strong>B.Sc. in Computer Science and Engineering</strong>
+            <span class="edu-date">Feb 2016 – Mar 2021</span><br />
+            Bangladesh University of Engineering and Technology (BUET), Dhaka,
+            Bangladesh
+            <br /><em>Advisor: Prof. A. B. M. Alim Al Islam</em>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications" class="pubs">
+        <h2>PUBLICATIONS</h2>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="genai">Use of GenAI</button>
+          <button data-filter="underrep">Underrepresented Groups</button>
+          <button data-filter="chatbot">AI Chatbot</button>
+          <button data-filter="abuse">Online Abuse & Privacy</button>
+          <button data-filter="learning">Online Learning</button>
+          <button data-filter="disease">Disease Outbreaks</button>
+        </div>
+
+        <!-- Publication Items -->
+        <ul class="pub-list">
+          <!-- Use of GenAI -->
+          <li data-category="genai">
+            <div class="pub-card">
+              <span class="highlight">Rudaiba Adnin</span>, Atharva Pandkar,
+              Bingsheng Yao, Dakuo Wang, and Maitraye Das. 2025.
+              <em
+                ><a
+                  href="https://dl.acm.org/doi/10.1145/3706598.3713393"
+                  target="_blank"
+                  rel="noopener"
+                  >Examining Student and Teacher Perspectives on Undisclosed Use
+                  of Generative AI in Academic Work</a
+                ></em
+              >.
+              <span class="venue"
+                ><i
+                  >Proceedings of the 2025 CHI Conference on Human Factors in
+                  Computing Systems (CHI ’25)</i
+                ></span
+              >
+              (Acceptance rate: 25.1%) |
+              <a
+                href="https://dl.acm.org/doi/10.1145/3706598.3713393"
+                target="_blank"
+                rel="noopener"
+                >DOI</a
+              >
+              |
+              <a
+                href="https://rudaibaadnin.github.io/publications/GenAI_Academic_Work_CHI25.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF</a
+              >
+              <div>
+                <em class="meta"
+                  >Participants: University students & instructors · Methods:
+                  Survey + interviews · Analysis: Stats + reflexive thematic ·
+                  Tech: Pandas, NumPy, Plotly</em
+                >
+              </div>
+            </div>
+          </li>
+
+          <li data-category="genai">
+            <div class="pub-card">
+              <span class="highlight">Rudaiba Adnin</span> and Maitraye Das.
+              2024.
+              <em
+                ><a
+                  href="https://dl.acm.org/doi/10.1145/3663548.3675631"
+                  target="_blank"
+                  rel="noopener"
+                  >“I look at it as the king of knowledge”: How Blind People Use
+                  and Understand Generative AI Tools</a
+                ></em
+              >.
+              <span class="venue"
+                ><i
+                  >Proceedings of the 26th International ACM SIGACCESS
+                  Conference on Computers and Accessibility (ASSETS ’24)</i
+                ></span
+              >
+              (Acceptance rate: 30%) |
+              <a
+                href="https://dl.acm.org/doi/10.1145/3663548.3675631"
+                target="_blank"
+                rel="noopener"
+                >DOI</a
+              >
+              |
+              <a
+                href="https://rudaibaadnin.github.io/publications/BLV_UsageGenAI_ASSETS2024.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF</a
+              >
+              <div>
+                <em class="meta"
+                  >Participants: Blind people · Methods: Interviews · Analysis:
+                  Reflexive thematic</em
+                >
+              </div>
+            </div>
+          </li>
+
+          <li data-category="genai">
+            <div class="pub-card">
+              Hari Prasath Palani, <span class="highlight">Rudaiba Adnin</span>,
+              and Shivangee Nagar. 2025.
+              <em
+                ><a
+                  href="https://rudaibaadnin.github.io/publications/Kanak-OzCHI-2025-Camera-ready.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >Kanak: Automating the Generation of Accessible STEM Materials
+                  for Blind and Low-vision Students</a
+                ></em
+              >.
+              <span class="venue"
+                ><i
+                  >Proceedings of the 37th Australian Conference on
+                  Human-Computer Interaction (OzCHI ’25)</i
+                ></span
+              >
+              |
+              <a
+                href="https://rudaibaadnin.github.io/publications/Kanak-OzCHI-2025-Camera-ready.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF</a
+              >
+              <div>
+                <em class="meta"
+                  >Participants: Braille transcribers & TVIs · Methods:
+                  Within-subject user study · Analysis: Stats + reflexive
+                  thematic · Artifact: Kanak · Tech: ReactJS, NodeJS</em
+                >
+              </div>
+            </div>
+          </li>
+
+          <!-- Underrepresented Groups -->
+          <li data-category="underrep">
+            <div class="pub-card">
+              <span class="highlight">Rudaiba Adnin</span>, Ishita Haque, Sadia
+              Afroz, Alvi Md. Ishmam, Sakil Sarkar, Md. Kafi Khan, Afsana Mimi,
+              Sriram Chellappan, and A. B. M. Alim Al Islam. 2023.
+              <em
+                ><a
+                  href="https://dl.acm.org/doi/10.1145/3605150"
+                  target="_blank"
+                  rel="noopener"
+                  >Focusing on the Unfocused: Corresponding Perspectives on
+                  Connectivity among Small-scale Non-profit Organizations
+                  Working for Street Children in Bangladesh and Their Donors</a
+                ></em
+              >.
+              <span class="venue"
+                ><i
+                  >Proceedings of the 7th ACM SIGCAS/SIGCHI Conference on
+                  Computing and Sustainable Societies (COMPASS ’24)</i
+                ></span
+              >
+              |
+              <a
+                href="https://dl.acm.org/doi/10.1145/3605150"
+                target="_blank"
+                rel="noopener"
+                >DOI</a
+              >
+              |
+              <a
+                href="https://rudaibaadnin.github.io/publications/NPOs_OnlinePlatformUse_COMPASS2023.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF</a
+              >
+              <div>
+                <em class="meta"
+                  >Participants: Organizers & general public · Methods: Survey +
+                  interviews · Analysis: Stats + thematic · Tech: Pandas, NumPy,
+                  Plotly</em
+                >
+              </div>
+            </div>
+          </li>
+
+          <li data-category="underrep">
+            <div class="pub-card">
+              <span class="highlight">Rudaiba Adnin</span>, Ishita Haque, Sadia
+              Afroz, Alvi Md. Ishmam, and A. B. M. Alim Al Islam. 2022.
+              <em
+                ><a
+                  href="https://dl.acm.org/doi/10.1145/3500868.3559443"
+                  target="_blank"
+                  rel="noopener"
+                  >Investigating Human Factors in Willingness to Donate to the
+                  Small-scale Non-profit Organizations in Bangladesh</a
+                ></em
+              >.
+              <span class="venue"
+                ><i
+                  >Companion Publication of the 2022 Conference on Computer
+                  Supported Cooperative Work and Social Computing (CSCW ’22
+                  Companion)</i
+                ></span
+              >
+              |
+              <a
+                href="https://dl.acm.org/doi/10.1145/3500868.3559443"
+                target="_blank"
+                rel="noopener"
+                >DOI</a
+              >
+              |
+              <a
+                href="https://rudaibaadnin.github.io/publications/HumanFactorsinWillingnesstoDonate_CSCW2022.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF</a
+              >
+              <div>
+                <em class="meta"
+                  >Participants: General public · Methods: Survey + interviews ·
+                  Analysis: Statistical</em
+                >
+              </div>
+            </div>
+          </li>
+
+          <li data-category="underrep">
+            <div class="pub-card">
+              <span class="highlight">Rudaiba Adnin</span>, Sadia Afroz,
+              Muhtasim Ulfat, and Anindya Iqbal. 2022.
+              <em
+                ><a
+                  href="https://dl.acm.org/doi/10.1145/3500868.3559440"
+                  target="_blank"
+                  rel="noopener"
+                  >A Hiring Story: Experiences of Employers in Hiring CS
+                  Graduates in Software Startups</a
+                ></em
+              >.
+              <span class="venue"
+                ><i
+                  >Companion Publication of the 2022 Conference on Computer
+                  Supported Cooperative Work and Social Computing (CSCW ’22
+                  Companion)</i
+                ></span
+              >
+              |
+              <a
+                href="https://dl.acm.org/doi/10.1145/3500868.3559440"
+                target="_blank"
+                rel="noopener"
+                >DOI</a
+              >
+              |
+              <a
+                href="https://rudaibaadnin.github.io/publications/AHiringStory_CSCW2022.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF</a
+              >
+              <div>
+                <em class="meta"
+                  >Participants: Startup employers · Methods: Interviews ·
+                  Analysis: Thematic</em
+                >
+              </div>
+            </div>
+          </li>
+
+          <!-- AI Chatbot -->
+          <li data-category="chatbot">
+            <div class="pub-card">
+              Md Ehtesham-Ul-Haque, Jacob D’Rozario,
+              <span class="highlight">Rudaiba Adnin</span>, Farhan Tanvir
+              Utshaw, Fabiha Tasneem, Israt Jahan Shefa, and A. B. M. Alim Al
+              Islam. 2023.
+              <em
+                ><a
+                  href="https://doi.org/10.1016/j.cogsys.2023.101168"
+                  target="_blank"
+                  rel="noopener"
+                  >EmoBot: Artificial emotion generation through an emotional
+                  chatbot during general-purpose conversations</a
+                ></em
+              >. <span class="venue"><i>Cognitive Systems Research</i></span> |
+              <a
+                href="https://doi.org/10.1016/j.cogsys.2023.101168"
+                target="_blank"
+                rel="noopener"
+                >DOI</a
+              >
+              |
+              <a
+                href="https://rudaibaadnin.github.io/publications/EmoBot_CognitiveSystemsResearch2023.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF</a
+              >
+              <div>
+                <em class="meta"
+                  >Participants: All ages · Method: Implementation + user eval ·
+                  Data: Survey + interaction logs · Analysis: Statistical ·
+                  Artifact: Chatbot</em
+                >
+              </div>
+            </div>
+          </li>
+
+          <!-- Online Abuse & Privacy -->
+          <li data-category="abuse">
+            <div class="pub-card">
+              <span class="fa fa-trophy" aria-hidden="true"></span>
+              Ishita Haque, <span class="highlight">Rudaiba Adnin</span>, Sadia
+              Afroz, Faria Huq, Sazan Mahbub, Sami Azam, and A. B. M. Alim Al
+              Islam. 2022.
+              <em
+                ><a
+                  href="https://dl.acm.org/doi/10.1145/3569551.3569555"
+                  target="_blank"
+                  rel="noopener"
+                  >Citadel: An Automated Abuse Detection System to Detect And
+                  Prevent Abusive Behaviors over Emails</a
+                ></em
+              >.
+              <span class="venue"
+                ><i
+                  >Proceedings of the 9th International Conference on
+                  Networking, Systems and Security (NSysS ’22)</i
+                ></span
+              >
+              (Acceptance rate: 27%) |
+              <a
+                href="https://dl.acm.org/doi/10.1145/3569551.3569555"
+                target="_blank"
+                rel="noopener"
+                >DOI</a
+              >
+              |
+              <a
+                href="https://rudaibaadnin.github.io/publications/Citadel_NSysS_2022.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF</a
+              >
+              <div>
+                <em class="meta"
+                  >Runner-up Paper Award · Participants: Frequent email users ·
+                  Method: 3-day field study · Data: interactions + survey ·
+                  Analysis: Statistical · Artifact: Chrome extension · Tech:
+                  TensorFlow, Pandas, Django, JS, SQLite, Inkscape, Plotly</em
+                >
+              </div>
+            </div>
+          </li>
+
+          <li data-category="abuse">
+            <div class="pub-card">
+              <span class="fa fa-trophy" aria-hidden="true"></span>
+              Ishita Haque, <span class="highlight">Rudaiba Adnin</span>, Sadia
+              Afroz, Faria Huq, Sazan Mahbub, and A. B. M. Alim Al Islam. 2021.
+              <em
+                ><a
+                  href="https://dl.acm.org/doi/10.1145/3491371.3491374"
+                  target="_blank"
+                  rel="noopener"
+                  >“A Tale on Abuse and Its Detection over Online Platforms,
+                  Especially over Emails”: From the Context of Bangladesh</a
+                ></em
+              >.
+              <span class="venue"
+                ><i
+                  >Proceedings of the 8th International Conference on
+                  Networking, Systems and Security (NSysS ’21)</i
+                ></span
+              >
+              (Acceptance rate: 16.67%) |
+              <a
+                href="https://dl.acm.org/doi/10.1145/3491371.3491374"
+                target="_blank"
+                rel="noopener"
+                >DOI</a
+              >
+              |
+              <a
+                href="https://rudaibaadnin.github.io/publications/ATALEONABUSEDETECTION_NSysS2021.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF</a
+              >
+              <div>
+                <em class="meta"
+                  >Best Paper Award · Participants: Frequent email users ·
+                  Methods: Survey + interviews · Analysis: Stats + thematic ·
+                  Tech: Pandas, NumPy, Plotly</em
+                >
+              </div>
+            </div>
+          </li>
+
+          <!-- Online Learning -->
+          <li data-category="learning">
+            <div class="pub-card">
+              <span class="highlight">Rudaiba Adnin</span>, Sadia Afroz, and
+              Sadia Sharmin. 2022.
+              <em
+                ><a
+                  href="https://dl.acm.org/doi/abs/10.1145/3530190.3534839"
+                  target="_blank"
+                  rel="noopener"
+                  >Note: Learn Online—High School Students’ Adoption of Online
+                  Learning in Bangladesh during COVID-19 Pandemic</a
+                ></em
+              >.
+              <span class="venue"
+                ><i
+                  >Proceedings of the 5th ACM SIGCAS/SIGCHI Conference on
+                  Computing and Sustainable Societies (COMPASS ’22)</i
+                ></span
+              >
+              |
+              <a
+                href="https://dl.acm.org/doi/abs/10.1145/3530190.3534839"
+                target="_blank"
+                rel="noopener"
+                >DOI</a
+              >
+              |
+              <a
+                href="https://rudaibaadnin.github.io/publications/learnonline_Compass2022.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF</a
+              >
+              <div>
+                <em class="meta"
+                  >Participants: High-school students · Methods: Interviews ·
+                  Analysis: Thematic</em
+                >
+              </div>
+            </div>
+          </li>
+
+          <!-- Disease Outbreaks -->
+          <li data-category="disease">
+            <div class="pub-card">
+              S Mahmudul Hasan, Alabi Mehzabin Anisha,
+              <span class="highlight">Rudaiba Adnin</span>, Ishrat Jahan Eliza,
+              Ishika Tarin, Sadia Afroz, and A. B. M. Alim Al Islam. 2022.
+              <em
+                ><a
+                  href="https://dl.acm.org/doi/10.1145/3530190.3534804"
+                  target="_blank"
+                  rel="noopener"
+                  >Revealing Influences of Socioeconomic Factors over Disease
+                  Outbreaks</a
+                ></em
+              >.
+              <span class="venue"
+                ><i
+                  >Proceedings of the 5th ACM SIGCAS/SIGCHI Conference on
+                  Computing and Sustainable Societies (COMPASS ’22)</i
+                ></span
+              >
+              |
+              <a
+                href="https://dl.acm.org/doi/10.1145/3530190.3534804"
+                target="_blank"
+                rel="noopener"
+                >DOI</a
+              >
+              |
+              <a
+                href="https://rudaibaadnin.github.io/publications/Disease%20Outbreak_Compass2022.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF</a
+              >
+              <div>
+                <em class="meta"
+                  >Artifact: Scraped data · Correlation: Pearson & Spearman ·
+                  Tech: Pandas, NumPy, Scikit-learn, NetworkX</em
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="experience">
+        <h2>EXPERIENCE</h2>
+        <ul class="exp-list">
+          <li>
+            <strong>Research Assistant</strong>
+            <span class="exp-date">Mar 2023 – Present</span><br />
+            <a href="https://tealab.sites.northeastern.edu/our-team/">
+              Technology, Equity, and Accessibility (TEA) Lab</a
+            >, Northeastern University — Boston, MA, USA
+            <ul class="exp-details">
+              <li>
+                <em
+                  >Studying, designing, and developing learning tools for blind
+                  and low-vision students with Prof. Maitraye Das (Advisor) and
+                  Prof. Abir Saha (Collaborator). Published two papers on the
+                  use of GenAI (CHI 2025, ASSETS 2024); submitted a recent paper
+                  to CHI 2026.</em
+                >
+              </li>
+              <!-- <li>
+                <em
+                  >Ideated and prototyped four learning tools using Figma; fully
+                  implemented one tool; currently conducting user
+                  evaluations.</em
+                >
+              </li> -->
+            </ul>
+          </li>
+
+          <li>
+            <strong>Research Intern</strong>
+            <span class="exp-date">Summer 2025</span><br />
+            <a href="https://www.unarlabs.com/">UNAR Labs</a> — Remote
+            <ul class="exp-details">
+              <li>
+                <em
+                  >Collaborated with Dr. Hari Prasath Palani (Mentor) on
+                  studying, prototyping, and evaluating two STEM learning tools
+                  for blind and low-vision students; co-authored two papers
+                  (OzCHI 2025, BCS HCI 2025).</em
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Teaching Assistant</strong>
+            <span class="exp-date">Spring 2025, Fall 2025</span><br />
+            Khoury College of Computer Sciences, Northeastern University —
+            Boston, MA, USA
+            <ul class="exp-details">
+              <li>
+                <em
+                  >CS 5340 (Human-Computer Interaction), Fall 2025: Guided
+                  students in projects, interface design, and evaluation; taught
+                  interface prototyping with Figma; graded coursework.</em
+                >
+              </li>
+              <li>
+                <em
+                  >CS 6350 (Empirical Research Methods), Spring 2025: Mentored
+                  students in designing and conducting user studies; graded
+                  coursework.</em
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Research Collaborator</strong>
+            <span class="exp-date">Aug 2020 – Aug 2023</span><br />
+            Next-generation Computing (NeC) Group, BUET — Dhaka, Bangladesh
+            <ul class="exp-details">
+              <li>
+                <em
+                  >Collaborated with Prof. A.B.M. Alim Al Islam (BUET), Prof.
+                  Sriram Chellappan (USF), Prof. Sadia Sharmin (BUET), Prof.
+                  Anindya Iqbal (BUET), and Prof. Rezwana Reaz (BUET) on several
+                  research projects.</em
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Database Engineer</strong>
+            <span class="exp-date">Mar 2021 – Jul 2023</span><br />
+            <a href="https://therapbd.com/">Therap BD Ltd.</a> — Dhaka,
+            Bangladesh
+            <ul class="exp-details">
+              <li>
+                <em
+                  >Developed and tuned SQL queries; maintained Oracle RAC
+                  databases; automated DBA workflows using Shell Script, Python,
+                  and Java; conducted R&D on Oracle Cloud, Goldengate,
+                  SQLTxplain, and DBSAT; trained junior engineers on database
+                  modules and related software.</em
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="skills">
+        <h2>SKILLS</h2>
+        <ul class="skills-list">
+          <li>
+            <span class="skill-category"
+              ><i class="fa fa-users"></i> User Research:</span
+            >
+            Semi-structured interviews, Surveys, Field studies
+          </li>
+          <li>
+            <span class="skill-category"
+              ><i class="fa fa-cogs"></i> Analysis:</span
+            >
+            Open Coding, Thematic Analysis, Reflexive Thematic Coding,
+            Significance Tests, Correlation, Regression
+          </li>
+          <li>
+            <span class="skill-category"
+              ><i class="fa fa-code"></i> Languages:</span
+            >
+            Python, PHP, C++, JavaScript, SQL, Bash, Java
+          </li>
+          <li>
+            <span class="skill-category"
+              ><i class="fa fa-pencil-ruler"></i> Prototyping:</span
+            >
+            Figma, JavaScript, HTML, CSS
+          </li>
+          <li>
+            <span class="skill-category"
+              ><i class="fa fa-layer-group"></i> Frameworks:</span
+            >
+            ReactJS, Flask, NodeJs, Django, Laravel, TensorFlow, Pandas, NLTK,
+            Numpy, Scikit-Learn, Plotly
+          </li>
+          <li>
+            <span class="skill-category"
+              ><i class="fa fa-wrench"></i> Tools:</span
+            >
+            LLM-APIs, Docker, Git, Oracle, MySQL, SQLite, Wireshark, Android
+            Studio, MATLAB, Logisim, Inkscape
+          </li>
+          <li>
+            <span class="skill-category"
+              ><i class="fa fa-desktop"></i> Platforms:</span
+            >
+            Linux, Windows
+          </li>
+          <li>
+            <span class="skill-category"
+              ><i class="fa fa-shield-alt"></i> Other Skills:</span
+            >
+            Leadership, Communication, Time Management, Detail Oriented
+          </li>
+        </ul>
+      </section>
+
+      <!-- Awards & Scholarships -->
+      <section id="awards" class="awards">
+        <h2>AWARDS & SCHOLARSHIPS</h2>
+        <ul class="awards-list">
+          <li>
+            Khoury Distinguished Fellowship, <span class="award-date">2023</span
+            ><br />
+            <i>Northeastern University</i>
+          </li>
+
+          <li>
+            Runner-up Paper Award <i class="fa fa-trophy"></i>,
+            <span class="award-date">2022</span><br />
+            <i
+              >International Conference on Networking, Systems and Security
+              (NSysS '22)</i
+            >
+          </li>
+
+          <li>
+            Registration Waiver Grant, <span class="award-date">2022</span
+            ><br />
+            <i>ACM COMPASS</i>
+          </li>
+
+          <li>
+            Best Paper Award <i class="fa fa-trophy"></i>,
+            <span class="award-date">2021</span><br />
+            <i
+              >International Conference on Networking, Systems and Security
+              (NSysS '21)</i
+            >
+          </li>
+
+          <li>
+            University Merit Scholarship (Level 4),
+            <span class="award-date">2020</span><br />
+            <i>Bangladesh University of Engineering and Technology (BUET)</i>
+          </li>
+
+          <li>
+            BUET Admission Test Scholarship, <span class="award-date">2016</span
+            ><br />
+            <i>Bangladesh University of Engineering and Technology (BUET)</i>
+          </li>
+
+          <li>
+            National Higher Secondary School Merit Scholarship,
+            <span class="award-date">2015</span><br />
+            <i>Government of Bangladesh</i>
+          </li>
+
+          <li>
+            National Secondary School Merit Scholarship,
+            <span class="award-date">2013</span><br />
+            <i>Government of Bangladesh</i>
+          </li>
+
+          <li>
+            Primary School Merit Scholarship,
+            <span class="award-date">2007</span><br />
+            <i>Government of Bangladesh</i>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <p>&copy; 2025 Rudaiba Adnin</p>
+        <ul class="footer-links">
+          <li>
+            <a href="mailto:rudaibaadnin@gmail.com"
+              ><i class="fa fa-envelope"></i> Email</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://scholar.google.com/citations?user=0uZSDBQAAAAJ&hl=en"
+              target="_blank"
+              ><i class="fa fa-graduation-cap"></i> Google Scholar</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/rudaiba-adnin-153b551b6/"
+              target="_blank"
+              ><i class="fa fa-linkedin"></i> LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="https://orcid.org/0000-0003-0753-7858" target="_blank"
+              ><i class="fa fa-id-card"></i> ORCID</a
+            >
+          </li>
+          <li>
+            <a href="https://twitter.com/RudaibaAdnin" target="_blank"
+              ><i class="fa fa-twitter"></i> Twitter</a
+            >
+          </li>
+        </ul>
+      </footer>
+    </main>
+
+    <!-- Filtering Script -->
+    <script>
+      const buttons = document.querySelectorAll(".filter-buttons button");
+      const pubs = document.querySelectorAll(".pub-list li");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const filter = btn.getAttribute("data-filter");
+          pubs.forEach((pub) => {
+            const cat = pub.getAttribute("data-category");
+            pub.style.display =
+              filter === "all" || cat === filter ? "list-item" : "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
