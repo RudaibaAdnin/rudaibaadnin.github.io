@@ -23,67 +23,50 @@
     <header class="site-header">
       <div class="header-top">
         <div class="header-text">
-          <h1 class="highlight">Rudaiba Adnin</h1>
+          <h1>Rudaiba Adnin</h1>
           <h2><i>CS Ph.D. Candidate at Northeastern University</i></h2>
         </div>
       </div>
-
-      <nav>
-        <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#publications">Publications</a></li>
-          <li><a href="index.html#education">Education</a></li>
-          <li><a href="index.html#experience">Experience</a></li>
-          <li><a href="index.html#skills">Skills</a></li>
-          <li><a href="index.html#awards">Awards</a></li>
-          <li>|</li>
-          <li>
-            <a href="portfolio.html" aria-label="Portfolio page">Portfolio</a>
-          </li>
-          <li>
-            <a
-              href="https://rudaibaadnin.github.io/publications/CV_RUDAIBA_ADNIN.pdf"
-              target="_blank"
-              aria-label="Download CV"
-              >CV</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://scholar.google.com/citations?user=0uZSDBQAAAAJ&hl=en"
-              target="_blank"
-              aria-label="Google Scholar profile"
-              >Google Scholar</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/rudaiba-adnin-153b551b6/"
-              target="_blank"
-              aria-label="LinkedIn profile"
-              >LinkedIn</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://orcid.org/0000-0003-0753-7858"
-              target="_blank"
-              aria-label="ORCID profile"
-              >ORCID</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/RudaibaAdnin"
-              target="_blank"
-              aria-label="Twitter profile"
-              >Twitter</a
-            >
-          </li>
-        </ul>
-      </nav>
     </header>
 
+    <nav id="main-nav" class="sticky-nav" aria-label="Primary">
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#awards">Awards</a></li>
+        <li>|</li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li>
+          <a
+            href="https://rudaibaadnin.github.io/publications/CV_RUDAIBA_ADNIN.pdf"
+            target="_blank"
+            >CV</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://scholar.google.com/citations?user=0uZSDBQAAAAJ&hl=en"
+            target="_blank"
+            >Google Scholar</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/rudaiba-adnin-153b551b6/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a href="https://orcid.org/0000-0003-0753-7858" target="_blank"
+            >ORCID</a
+          >
+        </li>
+      </ul>
+    </nav>
     <main class="section">
       <div class="container">
         <h2>Portfolio</h2>
@@ -145,5 +128,17 @@
         </li>
       </ul>
     </footer>
+    <script>
+      function setNavHeight() {
+        const nav = document.getElementById("main-nav");
+        if (!nav) return;
+        document.documentElement.style.setProperty(
+          "--nav-h",
+          nav.offsetHeight + "px"
+        );
+      }
+      window.addEventListener("load", setNavHeight);
+      window.addEventListener("resize", setNavHeight);
+    </script>
   </body>
 </html>
