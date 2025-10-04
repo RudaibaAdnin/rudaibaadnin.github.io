@@ -72,6 +72,23 @@ header h2 {
   font-size: 20px;
 }
 
+.header h1 a {
+  color: #5d3754;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0.2rem 0.2rem; /* so hover bg has room */
+  border-radius: 6px;
+  transition: color 0.2s ease, background-color 0.2s ease,
+    text-decoration 0.2s ease;
+}
+
+.header h1 a:hover {
+  /* background: #5d3754;
+  color: #fff; */
+  text-decoration: underline; /* keep tidy when bg appears */
+  font-weight: 800;
+}
+
 :root {
   --nav-h: 80px;
 } /* fallback */
@@ -567,4 +584,18 @@ main.section ul {
   font-size: 20px;
   font-weight: 400;
   text-align: center; /* center the text inside */
+}
+
+/* Bold-on-hover for all site links, keep underline */
+a:hover {
+  font-weight: 600; /* use an already-loaded weight */
+  text-decoration: underline; /* keep visible affordance */
+}
+
+/* If you want only certain areas to bold on hover, use these instead: */
+.navbar a:hover,
+main a:hover,
+.pubs .pub-card a:hover {
+  font-weight: 600;
+  text-decoration: underline;
 }
