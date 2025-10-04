@@ -251,7 +251,7 @@ section {
 }
 
 .highlight {
-  font-weight: 650;
+  font-weight: 600;
   color: #5d3754;
 }
 
@@ -274,7 +274,7 @@ main a,
 .pubs a,
 .about a {
   text-decoration: underline;
-  color: #5d3754;
+  color: #953553;
   font-weight: 500;
 }
 
@@ -586,16 +586,37 @@ main.section ul {
   text-align: center; /* center the text inside */
 }
 
-/* Bold-on-hover for all site links, keep underline */
-a:hover {
-  font-weight: 600; /* use an already-loaded weight */
-  text-decoration: underline; /* keep visible affordance */
-}
-
 /* If you want only certain areas to bold on hover, use these instead: */
-.navbar a:hover,
 main a:hover,
 .pubs .pub-card a:hover {
   font-weight: 600;
   text-decoration: underline;
+  color: #953553;
+}
+
+.news a,
+.pubs a,
+.about a,
+.education a,
+.experience a,
+.skills a,
+.awards a {
+  color: #953553; /* base purple */
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease, font-weight 0.2s ease;
+}
+
+/* Hover state: all links (About text included) */
+
+.news a:hover,
+.pubs a:hover,
+.about a:hover,
+.education a:hover,
+.experience a:hover,
+.skills a:hover,
+.awards a:hover {
+  color: #953553; /* rose-purple hover */
+  text-decoration: underline;
+  font-weight: 600;
 }
