@@ -1,35 +1,76 @@
-/* General reset */
+/* ===== Base / Tokens ===== */
+:root {
+  --purple: #5d3754;
+  --rose: #953553;
+  --bg: #ffffff;
+  --radius: 12px;
+  --shadow-sm: 0 4px 8px rgba(93, 55, 84, 0.1);
+  --shadow-md: 0 8px 14px rgba(93, 55, 84, 0.2);
+  --nav-h: 80px;
+}
+
+/* ===== General reset ===== */
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
-  font-size: 20px; /* All text 18px */
-  background-color: #ffffff;
-  color: #5d3754; /* Purple text */
+  font-size: 20px; /* site-wide text size */
+  background-color: var(--bg);
+  color: var(--purple);
   line-height: 1.6;
-  font-weight: 400; /* no bold */
+  font-weight: 400;
 }
 
-/* HEADER: not sticky */
+section {
+  scroll-margin-top: calc(var(--nav-h) + 10px);
+}
+
+/* ===== Header ===== */
 header,
 .site-header {
-  position: static; /* ensure not sticky */
+  position: static;
   text-align: center;
   margin-top: 50px;
 }
 
-/* NAV: only the navbar sticks */
+header h1 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 800;
+}
+
+header h2 {
+  font-weight: 400;
+  margin: 0.5rem 0 1.5rem 0;
+  font-size: 20px;
+}
+
+/* If your name in the header is a link */
+header h1 a {
+  color: var(--purple);
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0.2rem;
+  border-radius: 6px;
+  transition: color 0.2s ease, background-color 0.2s ease,
+    text-decoration 0.2s ease;
+}
+header h1 a:hover {
+  text-decoration: underline;
+  font-weight: 800;
+}
+
+/* ===== Sticky Nav ===== */
 .sticky-nav {
-  position: sticky; /* Safari-friendly if you want: position: -webkit-sticky; */
+  position: sticky; /* Safari-friendly: (-webkit-sticky) if needed */
   top: 0;
   z-index: 1000;
   background: #fff;
-  border-top: 1px solid #5d3754;
-  border-bottom: 1px solid #5d3754; /* unify border color */
+  border-top: 1px solid var(--purple);
+  border-bottom: 1px solid var(--purple);
 }
 
-/* UL inside the sticky nav */
 .sticky-nav .navbar {
-  margin: 0; /* no extra margin so sticky edge aligns cleanly */
+  margin: 0;
   padding: 0.5rem 1rem;
   list-style: none;
   display: flex;
@@ -38,132 +79,95 @@ header,
   gap: 1.5rem;
 }
 
-/* Links */
 .navbar li {
   font-size: 20px;
 }
 
 .navbar a {
-  color: #5d3754;
+  color: var(--purple);
   text-decoration: none;
   font-weight: 400;
-  padding: 0.2rem 0.2rem; /* so hover bg has room */
+  padding: 0.2rem;
   border-radius: 6px;
   transition: color 0.2s ease, background-color 0.2s ease,
     text-decoration 0.2s ease;
 }
-
 .navbar a:hover {
-  /* background: #5d3754;
-  color: #fff; */
-  text-decoration: underline; /* keep tidy when bg appears */
+  text-decoration: underline;
   font-weight: 600;
 }
 
-/* Headings in header */
-header h1 {
-  font-size: 32px;
-  margin: 0;
-  font-weight: 800;
+/* ===== Layout helpers ===== */
+main.section {
+  margin-left: 80px;
+  margin-right: 60px;
 }
-header h2 {
-  font-weight: 400;
-  margin: 0.5rem 0 1.5rem 0;
+main.section h2,
+main.section p,
+main.section ul {
+  text-align: left;
+}
+
+/* ===== Shared section block (streamlined) ===== */
+.about,
+.news,
+.pubs,
+.education,
+.experience,
+.skills,
+.awards {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 2rem 1.5rem;
+  border-bottom: 1px solid var(--purple);
   font-size: 20px;
 }
 
-.header h1 a {
-  color: #5d3754;
-  text-decoration: none;
-  font-weight: 400;
-  padding: 0.2rem 0.2rem; /* so hover bg has room */
+/* Shared “purple pill” h2 across sections */
+.about h2,
+.news h2,
+.pubs h2,
+.education h2,
+.experience h2,
+.skills h2,
+.awards h2 {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 1rem;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--purple);
+  color: #ffffff;
   border-radius: 6px;
-  transition: color 0.2s ease, background-color 0.2s ease,
-    text-decoration 0.2s ease;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
 }
 
-.header h1 a:hover {
-  /* background: #5d3754;
-  color: #fff; */
-  text-decoration: underline; /* keep tidy when bg appears */
-  font-weight: 800;
-}
-
-:root {
-  --nav-h: 80px;
-} /* fallback */
-section {
-  scroll-margin-top: calc(var(--nav-h) + 10px);
-} /* +10px breathing room */
-
-/* About Section */
+/* ===== About ===== */
 .about {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  padding: 2rem;
   gap: 2rem;
-  max-width: 1000px;
-  margin: auto;
-  border-bottom: 1px solid #5d3754;
-  font-size: 20px;
 }
-
-/* Add top spacing above the profile image */
 .about-img {
-  margin-top: 2rem; /* tweak as needed: 0.5rem–2rem */
+  margin-top: 2rem;
 }
-
-/* Optional: reduce the top margin on wider screens */
 @media (min-width: 768px) {
   .about-img {
     margin-top: 1rem;
   }
 }
-
 .about-text {
   flex: 1;
   min-width: 280px;
-  font-size: 20px;
 }
 
-.about-text h2 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  background-color: #5d3754; /* deep purple background */
-  color: #ffffff; /* white text */
-  padding: 0.4rem 0.8rem; /* adds breathing space inside */
-  border-radius: 6px; /* optional: rounded corners */
-  display: inline-block; /* so bg hugs the text */
-  text-align: center;
-}
-
-/* News Section */
-.news {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1.5rem 2rem 1.5rem;
-  border-bottom: 1px solid #5d3754;
-  font-size: 20px;
-}
-
-.news h2 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  background-color: #5d3754; /* deep purple background */
-  color: #ffffff; /* white text */
-  padding: 0.4rem 0.8rem; /* adds breathing space inside */
-  border-radius: 6px; /* optional: rounded corners */
-  display: inline-block; /* so bg hugs the text */
-  text-align: center;
-}
-
+/* ===== News ===== */
 .news-date {
-  background-color: #5d3754; /* deep purple */
-  color: #fff; /* white text */
+  background-color: var(--purple);
+  color: #fff;
   font-size: 20px;
   font-weight: bold;
   padding: 2px 8px;
@@ -172,352 +176,234 @@ section {
   display: inline-block;
 }
 
-/* Publications Section */
-.pubs {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1.5rem 2rem 1.5rem;
-  border-bottom: 1px solid #5d3754;
-  font-size: 20px;
-}
-
-.pubs h2 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  background-color: #5d3754; /* deep purple background */
-  color: #ffffff; /* white text */
-  padding: 0.4rem 0.8rem; /* adds breathing space inside */
-  border-radius: 6px; /* optional: rounded corners */
-  display: inline-block; /* so bg hugs the text */
-  text-align: center;
-}
-
-/* Filter buttons */
+/* ===== Publications ===== */
 .filter-buttons {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-
 .filter-buttons button {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   margin: 0.3rem 0.5rem;
   padding: 0.4rem 1.2rem;
-  border: 1px solid #5d3754;
+  border: 1px solid var(--purple);
   background: #ffffff;
-  color: #5d3754;
+  color: var(--purple);
   cursor: pointer;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
-
-/* Hover + Active state */
 .filter-buttons button:hover,
 .filter-buttons button.active {
-  background: #5d3754;
+  background: var(--purple);
   color: #ffffff;
 }
 
-/* Publication list reset */
+/* Publication list + numbering */
 .pub-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  counter-reset: pub;
+}
+.pub-list > li {
+  position: relative;
+  counter-increment: pub;
+  padding-left: 2.2rem; /* room for number */
+}
+.pub-list > li::before {
+  content: counter(pub) ".";
+  position: absolute;
+  left: 0;
+  top: 1.1rem;
+  color: var(--purple);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  width: 1.6rem;
+  text-align: right;
 }
 
-/* Each publication card */
 .pub-card {
-  border: 1px solid #5d3754;
-  border-radius: 12px;
+  border: 1px solid var(--purple);
+  border-radius: var(--radius);
   padding: 1rem 1.2rem;
   margin: 1rem 0;
   background-color: #faf9fb;
-  box-shadow: 0 4px 8px rgba(93, 55, 84, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-size: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+.pub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  background-color: #fff;
 }
 .pub-card .meta {
   display: block;
   margin-top: 0.3rem;
-  font-size: 20px;
-}
-
-/* Hover effect */
-.pub-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 14px rgba(93, 55, 84, 0.2);
-  background-color: #fff;
 }
 
 .highlight {
   font-weight: 600;
-  color: #5d3754;
+  color: var(--purple);
 }
 
-/* Links inside publications */
+/* Links inside publication cards */
 .pub-card a {
-  color: #5d3754;
+  color: var(--purple);
   font-weight: 500;
   text-decoration: none;
   margin-left: 0.4rem;
 }
-
 .pub-card a:hover {
   text-decoration: underline;
   color: #3c2436;
 }
 
-/* All other links */
-main a,
+/* ===== Global link styles for content areas ===== */
 .news a,
 .pubs a,
-.about a {
+.about a,
+.education a,
+.experience a,
+.skills a,
+.awards a,
+main a {
+  color: var(--rose);
   text-decoration: underline;
-  color: #953553;
   font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease, font-weight 0.2s ease;
 }
-
-main a:hover,
 .news a:hover,
 .pubs a:hover,
-.about a:hover {
-  color: #3c2436;
+.about a:hover,
+.education a:hover,
+.experience a:hover,
+.skills a:hover,
+.awards a:hover,
+main a:hover {
+  color: var(--rose);
+  text-decoration: underline;
+  font-weight: 600;
 }
 
-/* Education Section */
-.education {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1.5rem 2rem 1.5rem;
-  border-bottom: 1px solid #5d3754;
-  font-size: 20px;
-}
-
-.education h2 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  background-color: #5d3754; /* deep purple background */
-  color: #ffffff; /* white text */
-  padding: 0.4rem 0.8rem; /* adds breathing space inside */
-  border-radius: 6px; /* optional: rounded corners */
-  display: inline-block; /* so bg hugs the text */
-  text-align: center;
-}
-
-/* Education Section */
-.education {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1.5rem 2rem 1.5rem;
-  border-bottom: 1px solid #5d3754;
-  font-size: 20px;
-}
-
-.education h2 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  background-color: #5d3754; /* deep purple background */
-  color: #ffffff; /* white text */
-  padding: 0.4rem 0.8rem; /* adds breathing space inside */
-  border-radius: 6px; /* optional: rounded corners */
-  display: inline-block; /* so bg hugs the text */
-  text-align: center;
-}
-
-/* Education list */
+/* ===== Education ===== */
 .edu-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .edu-list li {
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
-
 .edu-date {
   font-style: italic;
   font-size: 20px;
-  color: #5d3754;
+  color: var(--purple);
 }
 
-/* Experience Section */
-.experience {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1.5rem 2rem 1.5rem;
-  border-bottom: 1px solid #5d3754;
-  font-size: 20px;
-}
-
-.experience h2 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  background-color: #5d3754; /* deep purple background */
-  color: #ffffff; /* white text */
-  padding: 0.4rem 0.8rem; /* adds breathing space inside */
-  border-radius: 6px; /* optional: rounded corners */
-  display: inline-block; /* so bg hugs the text */
-  text-align: center;
-}
-
+/* ===== Experience ===== */
 .exp-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .exp-list > li {
   margin-bottom: 2rem;
   line-height: 1.6;
 }
-
 .exp-date {
   font-style: italic;
   font-size: 20px;
-  color: #5d3754;
+  color: var(--purple);
 }
 
 /* Experience details bullets */
 .exp-details {
-  list-style: none; /* remove default bullets */
+  list-style: none;
   margin: 0.6rem 0 0 0.5rem;
   padding: 0;
   font-size: 20px;
 }
-
 .exp-details li {
   position: relative;
   margin-bottom: 0.6rem;
-  padding-left: 1.8rem; /* spacing for custom bullet */
+  padding-left: 1.8rem;
   line-height: 1.6;
 }
-
-/* Custom purple bullets */
 .exp-details li::before {
-  content: "●"; /* solid circle */
+  content: "●";
   position: absolute;
   left: 0;
   top: 0;
-  color: #5d3754; /* your purple theme */
+  color: var(--purple);
   font-size: 16px;
   line-height: 1.6;
 }
 
-/* Skills Section */
-.skills {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1.5rem 2rem 1.5rem;
-  border-bottom: 1px solid #5d3754;
-  font-size: 20px;
-}
-
-.skills h2 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  background-color: #5d3754; /* deep purple background */
-  color: #ffffff; /* white text */
-  padding: 0.4rem 0.8rem; /* adds breathing space inside */
-  border-radius: 6px; /* optional: rounded corners */
-  display: inline-block; /* so bg hugs the text */
-  text-align: center;
-}
-
+/* ===== Skills ===== */
 .skills-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .skills-list li {
+  position: relative;
+  padding-left: 1.5rem;
   margin-bottom: 1rem;
   line-height: 1.6;
 }
-/* Subtle decorative bullet */
 .skills-list li::before {
+  content: "●"; /* subtle decorative bullet */
   position: absolute;
   left: 0;
-  top: 0;
-  color: #5d3754;
+  top: 0.1rem;
   font-size: 14px;
+  color: var(--purple);
 }
-
-/* Bold + colored category names */
 .skill-category {
   font-weight: 600;
-  color: #5d3754;
+  color: var(--purple);
 }
 
-/* Awards Section */
-.awards {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1.5rem 2rem 1.5rem;
-  border-bottom: 1px solid #5d3754;
-  font-size: 20px;
-}
-
-.awards h2 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  background-color: #5d3754; /* deep purple background */
-  color: #ffffff; /* white text */
-  padding: 0.4rem 0.8rem; /* adds breathing space inside */
-  border-radius: 6px; /* optional: rounded corners */
-  display: inline-block; /* so bg hugs the text */
-  text-align: center;
-}
-
+/* ===== Awards ===== */
 .awards-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .awards-list li {
   margin-bottom: 1rem;
   line-height: 1.6;
   position: relative;
   padding-left: 1.5rem;
 }
-
-/* Subtle decorative bullet */
 .awards-list li::before {
   content: "●";
   position: absolute;
   left: 0;
   top: 0;
-  color: #5d3754;
+  color: var(--purple);
   font-size: 14px;
 }
-
 .award-date {
-  /* float: right; */
   font-style: italic;
   font-size: 20px;
-  color: #5d3754;
+  color: var(--purple);
 }
-
 .awards i {
   font-size: 20px;
 }
 
+/* ===== Footer ===== */
 .site-footer {
-  background: #5d3754;
+  background: var(--purple);
   color: #ffffff;
   text-align: center;
   padding: 1.5rem 1rem;
   margin-top: 3rem;
 }
-
 .site-footer p {
   margin: 0 0 0.8rem;
   font-size: 0.9rem;
@@ -532,17 +418,16 @@ main a:hover,
   justify-content: center;
   gap: 1rem;
 }
-
 .footer-links a {
   color: #ffffff;
   text-decoration: none;
   font-size: 0.9rem;
 }
-
 .footer-links a:hover {
   text-decoration: underline;
 }
 
+/* ===== Portfolio grid ===== */
 .portfolio-grid {
   list-style: none;
   padding-left: 0;
@@ -551,112 +436,16 @@ main a:hover,
   grid-template-columns: 1fr;
   gap: 0.75rem;
 }
-
 .portfolio-grid a {
   text-decoration: underline;
 }
 
-main.section {
-  margin-left: 80px; /* adjust value as you like */
-  margin-right: 60px; /* optional, for balance */
-}
-
-main.section h2,
-main.section p,
-main.section ul {
-  text-align: left; /* ensure text stays left-aligned */
-}
-
-/* Center the purple h2 pills */
-.news h2,
-.pubs h2,
-.education h2,
-.experience h2,
-.skills h2,
-.awards h2 {
-  display: block; /* must be block to center with auto margins */
-  width: fit-content; /* shrink to the text */
-  margin: 0 auto 1rem; /* centers the block itself */
-  padding: 0.4rem 0.8rem;
-  background-color: #5d3754;
-  color: #ffffff;
-  border-radius: 6px;
-  font-size: 20px;
-  font-weight: 400;
-  text-align: center; /* center the text inside */
-}
-
-/* If you want only certain areas to bold on hover, use these instead: */
-main a:hover,
-.pubs .pub-card a:hover {
-  font-weight: 600;
-  text-decoration: underline;
-  color: #953553;
-}
-
-.news a,
-.pubs a,
-.about a,
-.education a,
-.experience a,
-.skills a,
-.awards a {
-  color: #953553; /* base purple */
-  text-decoration: underline;
-  font-weight: 500;
-  transition: color 0.2s ease, text-decoration 0.2s ease, font-weight 0.2s ease;
-}
-
-/* Hover state: all links (About text included) */
-
-.news a:hover,
-.pubs a:hover,
-.about a:hover,
-.education a:hover,
-.experience a:hover,
-.skills a:hover,
-.awards a:hover {
-  color: #953553; /* rose-purple hover */
-  text-decoration: underline;
-  font-weight: 600;
-}
-
-/* Numbered publications: plain number (no circle) */
-.pubs .pub-list {
-  counter-reset: pub;
-  padding-left: 0;
-}
-
-.pubs .pub-list > li {
-  position: relative;
-  counter-increment: pub;
-  padding-left: 2.2rem; /* room for number */
-}
-
-/* Just the number + period, aligned left of the card */
-.pubs .pub-list > li::before {
-  content: counter(pub) ".";
-  position: absolute;
-  left: 0;
-  top: 1.1rem; /* lines up with card text */
-  color: #5d3754; /* theme purple */
-  font-weight: 700;
-  font-variant-numeric: tabular-nums; /* aligned widths for 1, 10, 100 */
-  width: 1.6rem; /* reserve space for 2–3 digits */
-  text-align: right;
-}
-
-/* Keep cards flush; spacing handled by li padding */
-.pubs .pub-card {
-  margin-left: 0;
-}
-
-/* Responsive tweak */
+/* ===== Publications: responsive tweak ===== */
 @media (max-width: 640px) {
-  .pubs .pub-list > li {
+  .pub-list > li {
     padding-left: 1.9rem;
   }
-  .pubs .pub-list > li::before {
+  .pub-list > li::before {
     top: 1rem;
     width: 1.4rem;
   }
