@@ -4,6 +4,7 @@
   --ink: #5d3754; /* body text */
   --line: #e9e6ea; /* dividers */
   --bg: #ffffff; /* page */
+  --focus: #1d4289; /* focus ring (blue) */
 }
 
 * {
@@ -22,12 +23,33 @@ body {
   font-size: 18px;
 }
 
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #fff;
+  color: var(--purple);
+  padding: 8px 12px;
+  border: 2px solid var(--purple);
+  border-radius: 8px;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  z-index: 1000;
+}
+
+.highlight {
+  font-weight: 600;
+  color: var(--purple);
+}
+
 /* Containers & Sections */
 .container {
   width: min(1100px, 92%);
   margin-inline: auto;
 }
-
 .narrow {
   width: min(900px, 100%);
   margin-inline: auto;
@@ -47,13 +69,11 @@ h2,
 h3 {
   color: var(--purple-dark);
   margin: 0 0 14px;
-  font-weight: 800;
+  font-weight: 650;
   letter-spacing: 0.2px;
 }
 h2 {
   font-size: clamp(26px, 2.5vw, 34px);
-  text-decoration: underline;
-  text-underline-offset: 6px;
 }
 h3 {
   font-size: clamp(20px, 2vw, 24px);
@@ -117,28 +137,21 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   margin: 22px 0 8px;
+  padding-left: 0; /* remove list indent */
 }
-/* .kp {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 12px 14px;
-  background: #fff;
+.key-points li {
+  list-style: none;
 }
-.kp-icon {
-  font-size: 20px;
-  margin-right: 6px;
-} */
 .kp {
   display: flex;
   align-items: flex-start;
   gap: 10px;
 }
-
 .kp-icon {
   font-size: 20px;
   line-height: 1.2;
   color: var(--purple);
-  margin-top: 3px; /* nudges icon down to align with first text line */
+  margin-top: 3px;
 }
 
 /* Pull quote */
@@ -150,16 +163,31 @@ h3 {
   font-style: italic;
   color: var(--purple-dark);
 }
+.pullquote footer {
+  margin-top: 6px;
+  font-style: normal;
+  font-size: 0.95em;
+  color: #7b6775;
+}
 
-/* Goals grid */
+/* Generic grid */
 .grid {
   display: grid;
   gap: 18px;
 }
-.goals {
+
+/* Goals list (list-based but styled as cards) */
+.goals-list {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   margin-top: 18px;
+  padding-left: 0; /* remove default <ol> indent */
+  counter-reset: dg; /* for optional auto-numbering if desired */
 }
+.goals-list > li {
+  list-style: none;
+}
+
+/* Card */
 .card {
   border: 1px solid var(--line);
   background: #fff;
@@ -220,13 +248,18 @@ figcaption {
   margin-top: 18px;
 }
 
-/* Prototype features */
+/* Prototype features (as list items) */
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 18px;
   margin-top: 16px;
+  padding-left: 0; /* remove <ol> indent */
 }
+.feature-grid > li {
+  list-style: none;
+}
+
 .feature {
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -239,18 +272,14 @@ figcaption {
   gap: 8px;
   margin-bottom: 8px;
 }
-.dot {
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  border-radius: 50%;
-  background: var(--purple);
-}
 
-/* Gallery */
-.gallery-2 {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  margin-top: 12px;
+/* Feature bullets inside cards */
+.bullets {
+  margin: 10px 0 0;
+  padding-left: 1.2rem;
+}
+.bullets li {
+  margin: 0.15rem 0;
 }
 
 /* Footer */
@@ -277,7 +306,7 @@ a:hover {
   color: var(--purple-dark);
 }
 
-/* Code snippet inline */
+/* Inline code */
 code {
   background: #f7f5f8;
   border: 1px solid var(--line);
@@ -287,7 +316,16 @@ code {
   font-size: 0.95em;
 }
 
-/* Responsive tweaks */
+/* Focus styles */
+a:focus,
+button:focus,
+[tabindex]:focus {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Responsive */
 @media (max-width: 720px) {
   .header-inner {
     grid-template-columns: 1fr;
@@ -301,20 +339,36 @@ code {
   }
 }
 
-.back-link,
-.back-to-portfolio a {
-  display: inline-block;
-  margin: 1rem 0;
-  font-weight: 600;
-  color: #6a1b9a; /* purple */
-  text-decoration: none;
+/* Current nav chip (outlined) vs hover (filled)
+.nav a[aria-current="page"] {
+  background: #fff;
+  color: var(--purple);
+  box-shadow: inset 0 0 0 2px var(--purple);
+} */
+
+/* Force two-column image grids where used */
+.gallery-2 {
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.back-link:hover,
-.back-to-portfolio a:hover {
-  color: #fff;
-  background-color: #6a1b9a;
-  padding: 4px 8px;
-  border-radius: 6px;
-  transition: 0.3s ease;
+/* Make sure .grid provides the layout for gallery-2 containers */
+.grid.gallery-2 {
+  display: grid; /* already set by .grid, kept for clarity */
+  gap: 18px; /* already from .grid */
+}
+
+/* Figures look tidy in grids */
+.gallery-2 figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+}
+
+/* Responsive: stack images on small screens */
+@media (max-width: 720px) {
+  .gallery-2 {
+    grid-template-columns: 1fr;
+  }
 }
