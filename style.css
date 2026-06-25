@@ -151,7 +151,7 @@ h2 {
 }
 
 .pub-info p {
-  margin: 2px 0;
+  margin: 1px 0;
 }
 
 .image-link {
@@ -170,7 +170,7 @@ h2 {
   object-fit: contain;
   object-position: center;
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  box-shadow: 01px\8px rgba(0, 0, 0, 0.18);
   cursor: zoom-in;
 }
 
@@ -318,4 +318,129 @@ h2 {
   height: 100%;
   object-fit: contain;
   display: block;
+}
+
+/* Full Publications Page */
+.publication-page h1 {
+  margin-bottom: 50px;
+}
+
+.publication-year-section {
+  position: relative;
+  border-top: 1px solid var(--border);
+  padding-top: 70px;
+  margin-bottom: 55px;
+}
+
+.publication-year {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  color: gray;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 1;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 800px) {
+  .publication-page h1 {
+    margin-top: 40px;
+    margin-bottom: 35px;
+  }
+
+  .publication-year-section {
+    padding-top: 60px;
+  }
+
+  .publication-year {
+    font-size: 34px;
+  }
+
+  .publication-page .pub-row {
+    margin-bottom: 42px;
+  }
+}
+
+/* Publication Filter Buttons */
+.publication-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 8px 0 55px;
+}
+
+.filter-pill {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-family: "Raleway", "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.filter-pill:hover {
+  transform: translateY(-1px);
+  background: purple;
+  color: white;
+  font-weight: 550;
+  outline: 1px solid purple;
+  outline-offset: 3px;
+}
+
+.filter-pill.active {
+  outline: 1px solid purple;
+  outline-offset: 3px;
+  background: purple;
+  color: white;
+  font-weight: 550;
+}
+
+.filter-all {
+  background: white;
+  color: purple;
+  border: 1px solid purple;
+}
+
+.filter-genai {
+  background: white;
+  color: purple;
+  border: 1px solid purple;
+}
+
+.filter-access {
+  background: white;
+  color: purple;
+  border: 1px solid purple;
+}
+
+.filter-hci {
+  background: white;
+  color: purple;
+  border: 1px solid purple;
+}
+
+.filter-underrep {
+  background: white;
+  color: purple;
+  border: 1px solid purple;
+}
+
+.pub-row.hidden-publication {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .publication-filters {
+    gap: 12px;
+    margin-bottom: 42px;
+  }
+
+  .filter-pill {
+    font-size: 16px;
+    padding: 10px 18px;
+  }
 }

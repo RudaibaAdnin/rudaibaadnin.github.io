@@ -3,23 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rudaiba Adnin</title>
+    <title>Publications | Rudaiba Adnin</title>
+
     <link rel="icon" type="image/png" href="favicon.png" />
-    <!-- Google Font: Raleway -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
-    />
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
     />
 
     <link rel="stylesheet" href="./style.css?v=2" />
@@ -32,168 +25,69 @@
       <label for="menu-toggle" class="menu-btn"> Menu </label>
 
       <nav class="nav">
-        <a href="#about" class="active">About</a>
-        <a href="publications.html">Publications</a>
-        <a href="#">Research Projects</a>
-        <!-- <a href="#">Personal</a> -->
+        <a href="index.html#about">About</a>
+        <a href="publications.html" class="active">Publications</a>
+        <a href="index.html#research-projects">Research Projects</a>
         <a target="_blank" href="publications/CV_RUDAIBA_ADNIN.pdf">CV</a>
       </nav>
     </header>
 
-    <main class="page">
-      <section id="about" class="hero">
-        <div class="hero-text">
-          <h1 class="page-bold-text">Rudaiba Adnin</h1>
-          <p class="role">CS Ph.D. Candidate, Northeastern University</p>
+    <main class="page publication-page">
+      <h1>Publications</h1>
 
-          <p>
-            I am a third-year Ph.D. student at
-            <a
-              href="https://www.khoury.northeastern.edu/"
-              target="_blank"
-              rel="noopener"
-              aria-label="Visit Northeastern University Khoury College of Computer Sciences"
-            >
-              Northeastern University, Khoury College of Computer Sciences</a
-            >. I work in the
-            <a
-              href="https://tealab.sites.northeastern.edu/"
-              target="_blank"
-              rel="noopener"
-              aria-label="Visit Technology, Equity, and Accessibility Lab"
-            >
-              Technology, Equity, and Accessibility (TEA) Lab</a
-            >. My advisor is
-            <a
-              href="https://maitraye.github.io/"
-              target="_blank"
-              rel="noopener"
-              aria-label="Visit Professor Maitraye Das's Profile"
-            >
-              Prof. Maitraye Das</a
-            >.
-          </p>
-          <p>
-            My research focuses on the intersection of Human-Computer
-            Interaction (HCI), Computer-Supported Cooperative Work (CSCW), and
-            Accessible Computing. I aim to develop accessible learning and
-            collaborative technologies for disabled individuals. Currently, I am
-            studying the accessibility of recent GenAI-powered tools from the
-            perspective of blind and low-vision individuals.
-          </p>
-          <p><strong class="page-bold-text">Pronouns:</strong> She/Her</p>
-          <p>
-            <strong class="page-bold-text"> Email Address:</strong>
-            <a
-              href="mailto:adnin.r@northeastern.edu"
-              target="_blank"
-              aria-label="Email Rudaiba Adnin"
-            >
-              adnin.r@northeastern.edu</a
-            >
-          </p>
+      <div class="publication-filters" aria-label="Publication filters">
+        <button class="filter-pill filter-all active" data-filter="all">
+          All
+        </button>
 
-          <p>
-            <strong class="page-bold-text">More Information:</strong>
-            <a
-              class="m-1"
-              href="publications/CV_RUDAIBA_ADNIN.pdf"
-              target="_blank"
-            >
-              CV
-            </a>
-            |
-            <a
-              class="m-1"
-              href="https://scholar.google.com/citations?user=0uZSDBQAAAAJ&hl=en"
-              target="_blank"
-              aria-label="Google Scholar link of Rudaiba Adnin"
-            >
-              Google Scholar
-            </a>
-            |
-            <a
-              class="m-1"
-              href="https://www.linkedin.com/in/rudaiba-adnin-153b551b6/"
-              target="_blank"
-              aria-label="LinkedIn link of Rudaiba Adnin"
-            >
-              LinkedIn
-            </a>
-          </p>
-        </div>
+        <button class="filter-pill filter-genai" data-filter="genai">
+          Generative AI
+        </button>
 
-        <img
-          class="profile-img"
-          src="rudaiba.jpg"
-          alt="This image features a portrait of Rudaiba, a brown woman wearing a white ribbed turtleneck sweater. She has medium-length black hair with soft waves and a slightly parted style. The background is neutral."
-        />
-      </section>
+        <button class="filter-pill filter-access" data-filter="accessibility">
+          Accessibility
+        </button>
 
-      <section class="news">
-        <h2 class="margin-needed">Highlights</h2>
+        <!-- <button class="filter-pill filter-hci" data-filter="hci">
+          HCI / CSCW
+        </button> -->
 
-        <ul>
-          <li class="highilght-list">
-            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-            Our paper
-            <a href="#" rel="noopener" aria-label="">
-              Neurodivergent Individuals Navigating English as a Second Language
-            </a>
-            was accepted at ASSETS 2026.
-          </li>
-          <li class="highilght-list">
-            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-            Our CHI 2025 paper on
-            <a
-              href="publications/GenAI_Academic_Work_CHI25.pdf"
-              target="_blank"
-              rel="noopener"
-              aria-label="Read more about Examining Student and Teacher Perspectives on Undisclosed Use of Generative AI in Academic Work at CHI 2025"
-            >
-              Undisclosed Use of Generative AI in Academic Work
-            </a>
-            was featured in
-            <a
-              href="https://fortune.com/2026/05/19/college-students-booing-commencement-speakers-ai-cheating-cognitive-dissonance/"
-              target="_blank"
-            >
-              Fortune
-            </a>
-            magazine and
-            <a
-              href="https://www.bostonglobe.com/2026/06/21/business/gen-z-ai-commencement-speeches-backlash-job-fears/"
-              target="_blank"
-            >
-              Boston Globe
-            </a>
-            newspaper.
-          </li>
-        </ul>
-      </section>
+        <button class="filter-pill filter-underrep" data-filter="blv">
+          Blind and Low-vision
+        </button>
 
-      <section id="publications" class="publications">
-        <h2 class="margin-needed">Selected Publications</h2>
+        <button class="filter-pill filter-underrep" data-filter="nd">
+          Neurodivergence
+        </button>
 
-        <article class="pub-row" data-category="genai">
-          <a class="image-link" href="#pub-img-0">
+        <button class="filter-pill filter-underrep" data-filter="npo">
+          Non-profit Organizations
+        </button>
+      </div>
+
+      <!-- 2026 -->
+      <section class="publication-year-section">
+        <div class="publication-year">2026</div>
+
+        <article class="pub-row" data-category="accessibility hci nd">
+          <a class="image-link" href="#pub-img-2026-1">
             <img
               src="publication-images/compounded-access.png"
-              alt="Preview image for compoudned access paper"
+              alt="Preview image for Compounded Access paper"
             />
           </a>
 
-          <div id="pub-img-0" class="image-overlay">
+          <div id="pub-img-2026-1" class="image-overlay">
             <a href="#" class="close-overlay" aria-label="Close image"></a>
             <img
               src="publication-images/compounded-access.png"
-              alt="Large preview image for Compoudned Access Paper"
+              alt="Large preview image for Compounded Access paper"
             />
           </div>
 
           <div class="pub-info">
             <p>
-              <a href="#" rel="noopener">
+              <a href="#">
                 Compounded Access: How Chinese Neurodivergent Students and
                 Professionals Navigate English as a Second Language
               </a>
@@ -201,29 +95,36 @@
 
             <p>
               Qiushi Liang,
-              <span class="page-bold-text">Rudaiba Adnin,</span> and Maitraye
+              <span class="page-bold-text">Rudaiba Adnin</span>, and Maitraye
               Das. 2026.
             </p>
 
             <p>
               Proceedings of the 28th International ACM SIGACCESS Conference on
-              Computers and Accessibility (ASSETS '26)
+              Computers and Accessibility.
             </p>
+
             <div class="pub-buttons">
-              <a href="#" rel="noopener">PDF</a>
-              <a href="#" rel="noopener">DOI</a>
+              <a href="#">PDF</a>
+              <a href="#">DOI</a>
             </div>
           </div>
         </article>
-        <article class="pub-row" data-category="genai">
-          <a class="image-link" href="#pub-img-1">
+      </section>
+
+      <!-- 2025 -->
+      <section class="publication-year-section">
+        <div class="publication-year">2025</div>
+
+        <article class="pub-row" data-category="genai hci">
+          <a class="image-link" href="#pub-img-2025-1">
             <img
               src="publication-images/undisclosed-use.png"
               alt="Preview image for GenAI academic work paper"
             />
           </a>
 
-          <div id="pub-img-1" class="image-overlay">
+          <div id="pub-img-2025-1" class="image-overlay">
             <a href="#" class="close-overlay" aria-label="Close image"></a>
             <img
               src="publication-images/undisclosed-use.png"
@@ -250,7 +151,7 @@
 
             <p>
               Proceedings of the 2025 CHI Conference on Human Factors in
-              Computing Systems (CHI ’25)
+              Computing Systems.
             </p>
 
             <div class="pub-buttons">
@@ -258,27 +159,30 @@
                 href="publications/GenAI_Academic_Work_CHI25.pdf"
                 target="_blank"
                 rel="noopener"
-                >PDF</a
               >
+                PDF
+              </a>
+
               <a
                 href="https://dl.acm.org/doi/10.1145/3706598.3713393"
                 target="_blank"
                 rel="noopener"
-                >DOI</a
               >
+                DOI
+              </a>
             </div>
           </div>
         </article>
 
-        <article class="pub-row" data-category="genai">
-          <a class="image-link" href="#pub-img-3">
+        <article class="pub-row" data-category="accessibility genai blv">
+          <a class="image-link" href="#pub-img-2025-2">
             <img
               src="publication-images/kanak.png"
               alt="Preview image for Kanak paper"
             />
           </a>
 
-          <div id="pub-img-3" class="image-overlay">
+          <div id="pub-img-2025-2" class="image-overlay">
             <a href="#" class="close-overlay" aria-label="Close image"></a>
             <img
               src="publication-images/kanak.png"
@@ -306,7 +210,7 @@
 
             <p>
               Proceedings of the 37th Australian Conference on Human-Computer
-              Interaction (OzCHI ’25)
+              Interaction.
             </p>
 
             <div class="pub-buttons">
@@ -314,27 +218,35 @@
                 href="publications/Kanak-OzCHI-2025-Camera-ready.pdf"
                 target="_blank"
                 rel="noopener"
-                >PDF</a
               >
+                PDF
+              </a>
+
               <a
                 href="https://dl.acm.org/doi/10.1145/3764687.3764694"
                 target="_blank"
                 rel="noopener"
-                >DOI</a
               >
+                DOI
+              </a>
             </div>
           </div>
         </article>
+      </section>
 
-        <article class="pub-row" data-category="genai">
-          <a class="image-link" href="#pub-img-2">
+      <!-- 2024 -->
+      <section class="publication-year-section">
+        <div class="publication-year">2024</div>
+
+        <article class="pub-row" data-category="genai accessibility blv">
+          <a class="image-link" href="#pub-img-2024-1">
             <img
               src="publication-images/mental-model.png"
               alt="Preview image for blind people and GenAI paper"
             />
           </a>
 
-          <div id="pub-img-2" class="image-overlay">
+          <div id="pub-img-2024-1" class="image-overlay">
             <a href="#" class="close-overlay" aria-label="Close image"></a>
             <img
               src="publication-images/mental-model.png"
@@ -361,40 +273,43 @@
 
             <p>
               Proceedings of the 26th International ACM SIGACCESS Conference on
-              Computers and Accessibility (ASSETS ’24)
+              Computers and Accessibility.
             </p>
-
-            <!-- <p class="meta">
-              Participants: Blind people · Methods: Interviews · Analysis:
-              Reflexive thematic analysis
-            </p> -->
 
             <div class="pub-buttons">
               <a
                 href="publications/BLV_UsageGenAI_ASSETS2024.pdf"
                 target="_blank"
                 rel="noopener"
-                >PDF</a
               >
+                PDF
+              </a>
+
               <a
                 href="https://dl.acm.org/doi/10.1145/3663548.3675631"
                 target="_blank"
                 rel="noopener"
-                >DOI</a
               >
+                DOI
+              </a>
             </div>
           </div>
         </article>
+      </section>
 
-        <article class="pub-row" data-category="underrep">
-          <a class="image-link" href="#pub-img-4">
+      <!-- 2023 -->
+      <section class="publication-year-section">
+        <div class="publication-year">2023</div>
+
+        <article class="pub-row" data-category="npo">
+          <a class="image-link" href="#pub-img-2023-1">
             <img
               src="publication-images/focusing-on-the-unfocused-image.png"
               alt="Preview image for nonprofit organizations paper"
             />
           </a>
 
-          <div id="pub-img-4" class="image-overlay">
+          <div id="pub-img-2023-1" class="image-overlay">
             <a href="#" class="close-overlay" aria-label="Close image"></a>
             <img
               src="publication-images/focusing-on-the-unfocused-image.png"
@@ -423,33 +338,71 @@
 
             <p>
               Proceedings of the 7th ACM SIGCAS/SIGCHI Conference on Computing
-              and Sustainable Societies (COMPASS '23)
+              and Sustainable Societies.
             </p>
+
             <div class="pub-buttons">
               <a
                 href="publications/NPOs_OnlinePlatformUse_COMPASS2023.pdf"
                 target="_blank"
                 rel="noopener"
-                >PDF</a
               >
+                PDF
+              </a>
+
               <a
                 href="https://dl.acm.org/doi/10.1145/3605150"
                 target="_blank"
                 rel="noopener"
-                >DOI</a
               >
+                DOI
+              </a>
             </div>
           </div>
         </article>
       </section>
     </main>
-    <script>
-      const navLinks = document.querySelectorAll(".nav a[href^='#']");
 
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          navLinks.forEach((item) => item.classList.remove("active"));
-          link.classList.add("active");
+    <script>
+      const filterButtons = document.querySelectorAll(".filter-pill");
+      const publicationRows = document.querySelectorAll(
+        ".publication-page .pub-row",
+      );
+      const yearSections = document.querySelectorAll(
+        ".publication-year-section",
+      );
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const selectedFilter = button.dataset.filter;
+
+          filterButtons.forEach((item) => item.classList.remove("active"));
+          button.classList.add("active");
+
+          publicationRows.forEach((row) => {
+            const categories = row.dataset.category || "";
+
+            if (
+              selectedFilter === "all" ||
+              categories.includes(selectedFilter)
+            ) {
+              row.classList.remove("hidden-publication");
+            } else {
+              row.classList.add("hidden-publication");
+            }
+          });
+
+          yearSections.forEach((section) => {
+            const visibleRows = section.querySelectorAll(
+              ".pub-row:not(.hidden-publication)",
+            );
+
+            if (visibleRows.length === 0) {
+              section.style.display = "none";
+            } else {
+              section.style.display = "block";
+            }
+          });
         });
       });
     </script>
