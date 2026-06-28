@@ -131,6 +131,28 @@ h2 {
 .page-bold-text {
   font-weight: 600;
 }
+.soft-highlight {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  color: #000;
+  padding: 0.02em 0.2em;
+  z-index: 0;
+  isolation: isolate;
+}
+
+.soft-highlight::before {
+  content: "";
+  position: absolute;
+  left: -0.12em;
+  right: -0.12em;
+  top: 0.12em;
+  bottom: 0.02em;
+  background: rgba(234, 214, 253, 0.75);
+  transform: skewX(20deg);
+  border-radius: 4px;
+  z-index: -1;
+}
 
 .margin-needed {
   margin-top: 60px;
@@ -225,6 +247,31 @@ h2 {
   color: #fff;
   font-weight: 550;
   text-decoration: none;
+}
+
+.see-more-btn {
+  margin-top: 18px;
+  padding: 8px 18px;
+  font-family: "Raleway", "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: purple;
+  background: #fff;
+  border: 1px solid purple;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.see-more-btn:hover,
+.see-more-btn:focus {
+  background: purple;
+  color: #fff;
+  outline: 2px solid purple;
+  outline-offset: 3px;
+}
+
+.highilght-list[hidden] {
+  display: none;
 }
 
 /* Mobile */

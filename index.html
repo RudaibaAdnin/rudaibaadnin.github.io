@@ -76,10 +76,14 @@
           <p>
             My research focuses on the intersection of Human-Computer
             Interaction (HCI), Computer-Supported Cooperative Work (CSCW), and
-            Accessible Computing. I aim to develop accessible learning and
-            collaborative technologies for disabled individuals. Currently, I am
-            studying the accessibility of recent GenAI-powered tools from the
-            perspective of blind and low-vision individuals.
+            Accessible Computing.In my PhD research, I study
+            <span class="soft-highlight"
+              >the accessibility of GenAI-powered tools</span
+            >
+            from the perspectives of blind and low-vision individuals. I aim to
+            design and develop
+            <span class="soft-highlight">accessible learning technologies</span>
+            for disabled individuals.
           </p>
           <p><strong class="page-bold-text">Pronouns:</strong> She/Her</p>
           <p>
@@ -133,24 +137,23 @@
       <section class="news">
         <h2 class="margin-needed">Highlights</h2>
 
-        <ul>
+        <ul class="highlights-list" id="highlightsList">
           <li class="highilght-list">
             <i class="fa fa-newspaper-o" aria-hidden="true"></i>
             Our paper
-            <a href="#" rel="noopener" aria-label="">
-              Towards Accessible AI Literacy
-            </a>
+            <a href="#" rel="noopener"> Towards Accessible AI Literacy </a>
             was accepted at ASSETS 2026.
           </li>
 
           <li class="highilght-list">
             <i class="fa fa-newspaper-o" aria-hidden="true"></i>
             Our paper
-            <a href="#" rel="noopener" aria-label="">
+            <a href="#" rel="noopener">
               Neurodivergent Individuals Navigating English as a Second Language
             </a>
             was accepted at ASSETS 2026.
           </li>
+
           <li class="highilght-list">
             <i class="fa fa-newspaper-o" aria-hidden="true"></i>
             Our CHI 2025 paper on
@@ -166,6 +169,7 @@
             <a
               href="https://fortune.com/2026/05/19/college-students-booing-commencement-speakers-ai-cheating-cognitive-dissonance/"
               target="_blank"
+              rel="noopener"
             >
               Fortune
             </a>
@@ -173,12 +177,36 @@
             <a
               href="https://www.bostonglobe.com/2026/06/21/business/gen-z-ai-commencement-speeches-backlash-job-fears/"
               target="_blank"
+              rel="noopener"
             >
               Boston Globe
             </a>
             newspaper.
           </li>
+
+          <!-- Add more highlights below. They will be hidden at first. -->
+          <li class="highilght-list">
+            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+            Our paper
+            <a
+              href="https://dl.acm.org/doi/10.1145/3764687.3764694"
+              target="_blank"
+              rel="noopener"
+              >Automating the Generation of Accessible STEM Materials</a
+            >
+            was appected at OzCHI 2025.
+          </li>
         </ul>
+
+        <button
+          class="see-more-btn"
+          id="seeMoreBtn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="highlightsList"
+        >
+          See more
+        </button>
       </section>
 
       <section id="publications" class="publications">
@@ -497,6 +525,49 @@
           link.classList.add("active");
         });
       });
+    </script>
+
+    <script>
+      const highlights = document.querySelectorAll(
+        "#highlightsList .highilght-list",
+      );
+      const seeMoreBtn = document.getElementById("seeMoreBtn");
+      const visibleCount = 3;
+
+      function showLess() {
+        highlights.forEach((item, index) => {
+          item.hidden = index >= visibleCount;
+        });
+
+        seeMoreBtn.textContent = "See more";
+        seeMoreBtn.setAttribute("aria-expanded", "false");
+      }
+
+      function showMore() {
+        highlights.forEach((item) => {
+          item.hidden = false;
+        });
+
+        seeMoreBtn.textContent = "See less";
+        seeMoreBtn.setAttribute("aria-expanded", "true");
+      }
+
+      if (highlights.length <= visibleCount) {
+        seeMoreBtn.hidden = true;
+      } else {
+        showLess();
+
+        seeMoreBtn.addEventListener("click", () => {
+          const isExpanded =
+            seeMoreBtn.getAttribute("aria-expanded") === "true";
+
+          if (isExpanded) {
+            showLess();
+          } else {
+            showMore();
+          }
+        });
+      }
     </script>
   </body>
 </html>
