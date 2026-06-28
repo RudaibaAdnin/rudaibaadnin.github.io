@@ -137,17 +137,11 @@
       <section class="news">
         <h2 class="margin-needed">Highlights</h2>
 
-        <ul class="highlights-list" id="highlightsList">
+        <ul class="decorated-list" id="highlightsList">
           <li class="highilght-list">
             <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-            Our paper
-            <a href="#" rel="noopener"> Towards Accessible AI Literacy </a>
-            was accepted at ASSETS 2026.
-          </li>
-
-          <li class="highilght-list">
-            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-            Our paper
+            Two of our papers
+            <a href="#" rel="noopener"> Towards Accessible AI Literacy </a> and
             <a href="#" rel="noopener">
               Neurodivergent Individuals Navigating English as a Second Language
             </a>
@@ -186,15 +180,79 @@
 
           <!-- Add more highlights below. They will be hidden at first. -->
           <li class="highilght-list">
-            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-            Our paper
+            Our paper on
             <a
               href="https://dl.acm.org/doi/10.1145/3764687.3764694"
               target="_blank"
               rel="noopener"
               >Automating the Generation of Accessible STEM Materials</a
             >
-            was appected at OzCHI 2025.
+            was accepted at OzCHI 2025.
+          </li>
+          <li class="highilght-list">
+            I started my research internship at
+
+            <a
+              href="https://www.mainetechnology.org/impact/innovator-spotlight/unar-labs/"
+              >UNAR Labs.</a
+            >
+          </li>
+          <li class="highilght-list">
+            I received my <span class="soft-highlight">Ph.D. Candidacy.</span>
+          </li>
+          <li class="highilght-list">
+            I received my <span class="soft-highlight">Masters degree</span> in
+            Computer Science from
+            <a
+              href="https://www.khoury.northeastern.edu/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit Northeastern University Khoury College of Computer Sciences"
+            >
+              Northeastern University, Khoury College of Computer Sciences</a
+            >.
+          </li>
+          <li class="highilght-list">
+            Our paper on
+
+            <a
+              href="publications/GenAI_Academic_Work_CHI25.pdf"
+              target="_blank"
+              rel="noopener"
+              aria-label="Read more about Examining Student and Teacher Perspectives on Undisclosed Use of Generative AI in Academic Work at CHI 2025"
+            >
+              Undisclosed Use of Generative AI in Academic Work
+            </a>
+            was accepted at CHI 2025.
+          </li>
+
+          <li class="highilght-list">
+            Our paper on
+
+            <a
+              href="publications/BLV_UsageGenAI_ASSETS2024.pdf"
+              target="_blank"
+              rel="noopener"
+              aria-label="Read more about Examining Student and Teacher Perspectives on Undisclosed Use of Generative AI in Academic Work at CHI 2025"
+            >
+              How Blind People Use and Understand Generative AI Tools
+            </a>
+            was accepted at ASSETS 2024.
+          </li>
+          <li class="highilght-list">
+            I received
+            <span class="soft-highlight">Khoury Distinguished Fellowship.</span>
+          </li>
+          <li class="highilght-list">
+            I started my Ph.D. at
+            <a
+              href="https://www.khoury.northeastern.edu/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit Northeastern University Khoury College of Computer Sciences"
+            >
+              Northeastern University, Khoury College of Computer Sciences</a
+            >.
           </li>
         </ul>
 
@@ -343,6 +401,12 @@
                 target="_blank"
                 rel="noopener"
                 >DOI</a
+              >
+              <a
+                href="https://fortune.com/2026/05/19/college-students-booing-commencement-speakers-ai-cheating-cognitive-dissonance/"
+                target="_blank"
+                rel="noopener"
+                >Media Coverage</a
               >
             </div>
           </div>
@@ -532,7 +596,7 @@
         "#highlightsList .highilght-list",
       );
       const seeMoreBtn = document.getElementById("seeMoreBtn");
-      const visibleCount = 3;
+      const visibleCount = 2;
 
       function showLess() {
         highlights.forEach((item, index) => {
