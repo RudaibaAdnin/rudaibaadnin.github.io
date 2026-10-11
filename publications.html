@@ -1,24 +1,47 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Publications | Rudaiba Adnin</title>
 
     <link rel="icon" type="image/png" href="favicon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./style.css?v=2" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
+    <!-- =====================================================
+         Header
+         Same header styling as index.html
+         ===================================================== -->
+
     <header class="topbar">
       <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
@@ -26,59 +49,119 @@
 
       <nav class="nav">
         <a href="index.html#about">About</a>
-        <a href="publications.html" class="active">Publications</a>
-        <a href="index.html#research-projects">Research Projects</a>
-        <a target="_blank" href="publications/CV_RUDAIBA_ADNIN.pdf">CV</a>
+
+        <a href="publications.html" class="active" aria-current="page">
+          Publications
+        </a>
+
+        <a href="research_projects.html"> Research Projects </a>
+
+        <a target="_blank" href="publications/CV_RUDAIBA_ADNIN.pdf"> CV </a>
       </nav>
     </header>
 
-    <main class="page publication-page">
-      <h1>Publications</h1>
+    <!-- IMPORTANT:
+         There is intentionally NO "publication-page" class here.
+
+         That class in your style.css contains publication-specific
+         overrides that make these rows look different from index.html.
+    -->
+
+    <main class="page all-publications-page" id="publications" tabindex="-1">
+      <h1 class="page-bold-text">Publications</h1>
+
+      <!-- ===================================================
+           Filtering
+           =================================================== -->
 
       <div class="publication-filters" aria-label="Publication filters">
-        <button class="filter-pill filter-all active" data-filter="all">
+        <button
+          type="button"
+          class="filter-pill active"
+          data-filter="all"
+          aria-pressed="true"
+        >
           All
         </button>
 
-        <button class="filter-pill filter-genai" data-filter="genai">
+        <button
+          type="button"
+          class="filter-pill"
+          data-filter="genai"
+          aria-pressed="false"
+        >
           Generative AI
         </button>
 
-        <button class="filter-pill filter-access" data-filter="accessibility">
+        <button
+          type="button"
+          class="filter-pill"
+          data-filter="accessibility"
+          aria-pressed="false"
+        >
           Accessibility
         </button>
 
-        <!-- <button class="filter-pill filter-hci" data-filter="hci">
-          HCI / CSCW
-        </button> -->
-
-        <button class="filter-pill filter-underrep" data-filter="blv">
+        <button
+          type="button"
+          class="filter-pill"
+          data-filter="blv"
+          aria-pressed="false"
+        >
           Blind and Low-vision
         </button>
 
-        <button class="filter-pill filter-underrep" data-filter="nd">
+        <button
+          type="button"
+          class="filter-pill"
+          data-filter="nd"
+          aria-pressed="false"
+        >
           Neurodivergence
         </button>
 
-        <button class="filter-pill filter-underrep" data-filter="npo">
+        <button
+          type="button"
+          class="filter-pill"
+          data-filter="npo"
+          aria-pressed="false"
+        >
           Non-profit Organizations
         </button>
       </div>
 
-      <!-- 2026 -->
-      <section class="publication-year-section">
-        <div class="publication-year">2026</div>
+      <!-- =====================================================
+           2026
+           ===================================================== -->
 
-        <article class="pub-row" data-category="accessibility hci blv genai">
+      <section class="publication-year-section" aria-labelledby="year-2026">
+        <div class="publication-year" id="year-2026">2026</div>
+
+        <!-- ===================================================
+             COPY OF INDEX.HTML PUBLICATION 1
+             =================================================== -->
+
+        <article class="pub-row" data-category="genai accessibility blv">
           <a class="image-link" href="#pub-img-00">
             <img
               src="publication-images/accessible-ai-literacy.png"
-              alt="Preview image for compoudned access paper"
+              alt="Preview image for Accessible AI Literacy paper"
             />
           </a>
 
           <div id="pub-img-00" class="image-overlay">
-            <a href="#" class="close-overlay" aria-label="Close image"></a>
+            <button
+              type="button"
+              class="close-overlay"
+              aria-label="Close enlarged image"
+            >
+              <span class="close-overlay-button">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+
+                <span>Close</span>
+              </span>
+            </button>
+
             <img
               src="publication-images/accessible-ai-literacy.png"
               alt="Large preview image for Accessible AI Literacy Paper"
@@ -99,44 +182,63 @@
             </p>
 
             <p>
-              <span class="page-bold-text">Rudaiba Adnin,</span> Abir Saha, and
-              Maitraye Das. 2026.
+              <span class="page-bold-text"> Rudaiba Adnin, </span>
+              Abir Saha, and Maitraye Das. 2026.
             </p>
 
             <p>
               Proceedings of the 28th International ACM SIGACCESS Conference on
               Computers and Accessibility (ASSETS '26)
             </p>
+
             <div class="pub-buttons">
               <a
                 href="publications/BLV_AI_literacy_ASSETS26.pdf"
                 rel="noopener"
                 target="_blank"
-                >PDF</a
               >
+                PDF
+              </a>
+
               <a
                 href="https://doi.org/10.1145/3797867.3829007"
                 rel="noopener"
                 target="_blank"
-                >DOI</a
               >
+                DOI
+              </a>
             </div>
           </div>
         </article>
 
-        <article class="pub-row" data-category="accessibility hci nd">
+        <!-- ===================================================
+             COPY OF INDEX.HTML PUBLICATION 2
+             =================================================== -->
+
+        <article class="pub-row" data-category="accessibility nd">
           <a class="image-link" href="#pub-img-0">
             <img
               src="publication-images/compounded-access.png"
-              alt="Preview image for compoudned access paper"
+              alt="Preview image for Compounded Access paper"
             />
           </a>
 
           <div id="pub-img-0" class="image-overlay">
-            <a href="#" class="close-overlay" aria-label="Close image"></a>
+            <button
+              type="button"
+              class="close-overlay"
+              aria-label="Close enlarged image"
+            >
+              <span class="close-overlay-button">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+
+                <span>Close</span>
+              </span>
+            </button>
+
             <img
               src="publication-images/compounded-access.png"
-              alt="Large preview image for Compoudned Access Paper"
+              alt="Large preview image for Compounded Access Paper"
             />
           </div>
 
@@ -154,46 +256,74 @@
 
             <p>
               Qiushi Liang,
-              <span class="page-bold-text">Rudaiba Adnin,</span> and Maitraye
-              Das. 2026.
+
+              <span class="page-bold-text"> Rudaiba Adnin, </span>
+
+              and Maitraye Das. 2026.
             </p>
 
             <p>
               Proceedings of the 28th International ACM SIGACCESS Conference on
               Computers and Accessibility (ASSETS '26)
             </p>
+
+            <p>
+              <span class="soft-highlight"> Honorable Mention </span>
+            </p>
+
             <div class="pub-buttons">
               <a
                 href="publications/ND_L2_speakers_ASSETS26.pdf"
                 rel="noopener"
                 target="_blank"
-                >PDF</a
               >
+                PDF
+              </a>
+
               <a
                 href="https://doi.org/10.1145/3797867.3829052"
                 rel="noopener"
                 target="_blank"
-                >DOI</a
               >
+                DOI
+              </a>
             </div>
           </div>
         </article>
       </section>
 
-      <!-- 2025 -->
-      <section class="publication-year-section">
-        <div class="publication-year">2025</div>
+      <!-- =====================================================
+           2025
+           ===================================================== -->
 
-        <article class="pub-row" data-category="genai hci">
-          <a class="image-link" href="#pub-img-2025-1">
+      <section class="publication-year-section" aria-labelledby="year-2025">
+        <div class="publication-year" id="year-2025">2025</div>
+
+        <!-- ===================================================
+             EXACT INDEX.HTML STYLE
+             =================================================== -->
+
+        <article class="pub-row" data-category="genai">
+          <a class="image-link" href="#pub-img-1">
             <img
               src="publication-images/undisclosed-use.png"
               alt="Preview image for GenAI academic work paper"
             />
           </a>
 
-          <div id="pub-img-2025-1" class="image-overlay">
-            <a href="#" class="close-overlay" aria-label="Close image"></a>
+          <div id="pub-img-1" class="image-overlay">
+            <button
+              type="button"
+              class="close-overlay"
+              aria-label="Close enlarged image"
+            >
+              <span class="close-overlay-button">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+
+                <span>Close</span>
+              </span>
+            </button>
+
             <img
               src="publication-images/undisclosed-use.png"
               alt="Large preview image for GenAI academic work paper"
@@ -213,13 +343,13 @@
             </p>
 
             <p>
-              <span class="page-bold-text">Rudaiba Adnin</span>, Atharva
+              <span class="page-bold-text"> Rudaiba Adnin </span>, Atharva
               Pandkar, Bingsheng Yao, Dakuo Wang, and Maitraye Das. 2025.
             </p>
 
             <p>
               Proceedings of the 2025 CHI Conference on Human Factors in
-              Computing Systems.
+              Computing Systems (CHI ’25)
             </p>
 
             <div class="pub-buttons">
@@ -238,20 +368,43 @@
               >
                 DOI
               </a>
+
+              <a
+                href="https://fortune.com/2026/05/19/college-students-booing-commencement-speakers-ai-cheating-cognitive-dissonance/"
+                target="_blank"
+                rel="noopener"
+              >
+                Media Coverage
+              </a>
             </div>
           </div>
         </article>
 
-        <article class="pub-row" data-category="accessibility genai blv">
-          <a class="image-link" href="#pub-img-2025-2">
+        <!-- ===================================================
+             KANAK
+             =================================================== -->
+
+        <article class="pub-row" data-category="genai accessibility blv">
+          <a class="image-link" href="#pub-img-3">
             <img
               src="publication-images/kanak.png"
               alt="Preview image for Kanak paper"
             />
           </a>
 
-          <div id="pub-img-2025-2" class="image-overlay">
-            <a href="#" class="close-overlay" aria-label="Close image"></a>
+          <div id="pub-img-3" class="image-overlay">
+            <button
+              type="button"
+              class="close-overlay"
+              aria-label="Close enlarged image"
+            >
+              <span class="close-overlay-button">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+
+                <span>Close</span>
+              </span>
+            </button>
+
             <img
               src="publication-images/kanak.png"
               alt="Large preview image for Kanak paper"
@@ -272,13 +425,14 @@
 
             <p>
               Hari Prasath Palani,
-              <span class="page-bold-text">Rudaiba Adnin</span>, and Shivangee
+
+              <span class="page-bold-text"> Rudaiba Adnin </span>, and Shivangee
               Nagar. 2025.
             </p>
 
             <p>
               Proceedings of the 37th Australian Conference on Human-Computer
-              Interaction.
+              Interaction (OzCHI ’25)
             </p>
 
             <div class="pub-buttons">
@@ -302,20 +456,34 @@
         </article>
       </section>
 
-      <!-- 2024 -->
-      <section class="publication-year-section">
-        <div class="publication-year">2024</div>
+      <!-- =====================================================
+           2024
+           ===================================================== -->
+
+      <section class="publication-year-section" aria-labelledby="year-2024">
+        <div class="publication-year" id="year-2024">2024</div>
 
         <article class="pub-row" data-category="genai accessibility blv">
-          <a class="image-link" href="#pub-img-2024-1">
+          <a class="image-link" href="#pub-img-2">
             <img
               src="publication-images/mental-model.png"
               alt="Preview image for blind people and GenAI paper"
             />
           </a>
 
-          <div id="pub-img-2024-1" class="image-overlay">
-            <a href="#" class="close-overlay" aria-label="Close image"></a>
+          <div id="pub-img-2" class="image-overlay">
+            <button
+              type="button"
+              class="close-overlay"
+              aria-label="Close enlarged image"
+            >
+              <span class="close-overlay-button">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+
+                <span>Close</span>
+              </span>
+            </button>
+
             <img
               src="publication-images/mental-model.png"
               alt="Large preview image for blind people and GenAI paper"
@@ -335,13 +503,13 @@
             </p>
 
             <p>
-              <span class="page-bold-text">Rudaiba Adnin</span> and Maitraye
-              Das. 2024.
+              <span class="page-bold-text"> Rudaiba Adnin </span>
+              and Maitraye Das. 2024.
             </p>
 
             <p>
               Proceedings of the 26th International ACM SIGACCESS Conference on
-              Computers and Accessibility.
+              Computers and Accessibility (ASSETS ’24)
             </p>
 
             <div class="pub-buttons">
@@ -365,20 +533,34 @@
         </article>
       </section>
 
-      <!-- 2023 -->
-      <section class="publication-year-section">
-        <div class="publication-year">2023</div>
+      <!-- =====================================================
+           2023
+           ===================================================== -->
+
+      <section class="publication-year-section" aria-labelledby="year-2023">
+        <div class="publication-year" id="year-2023">2023</div>
 
         <article class="pub-row" data-category="npo">
-          <a class="image-link" href="#pub-img-2023-1">
+          <a class="image-link" href="#pub-img-2023">
             <img
               src="publication-images/focusing-on-the-unfocused-image.png"
               alt="Preview image for nonprofit organizations paper"
             />
           </a>
 
-          <div id="pub-img-2023-1" class="image-overlay">
-            <a href="#" class="close-overlay" aria-label="Close image"></a>
+          <div id="pub-img-2023" class="image-overlay">
+            <button
+              type="button"
+              class="close-overlay"
+              aria-label="Close enlarged image"
+            >
+              <span class="close-overlay-button">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+
+                <span>Close</span>
+              </span>
+            </button>
+
             <img
               src="publication-images/focusing-on-the-unfocused-image.png"
               alt="Large preview image for nonprofit organizations paper"
@@ -399,7 +581,7 @@
             </p>
 
             <p>
-              <span class="page-bold-text">Rudaiba Adnin</span>, Ishita Haque,
+              <span class="page-bold-text"> Rudaiba Adnin </span>, Ishita Haque,
               Sadia Afroz, Alvi Md. Ishmam, Sakil Sarkar, Md. Kafi Khan, Afsana
               Mimi, Sriram Chellappan, and A. B. M. Alim Al Islam. 2023.
             </p>
@@ -431,47 +613,193 @@
       </section>
     </main>
 
+    <!-- =====================================================
+         FILTERING
+         Only controls visibility.
+         Does not change publication styles.
+         ===================================================== -->
+
     <script>
       const filterButtons = document.querySelectorAll(".filter-pill");
+
       const publicationRows = document.querySelectorAll(
-        ".publication-page .pub-row",
+        ".publication-year-section .pub-row",
       );
+
       const yearSections = document.querySelectorAll(
         ".publication-year-section",
       );
+
+      function updateLastVisiblePublications() {
+        yearSections.forEach((section) => {
+          const rows = Array.from(section.querySelectorAll(".pub-row"));
+
+          rows.forEach((row) => {
+            row.classList.remove("last-visible-publication");
+          });
+
+          const visibleRows = rows.filter(
+            (row) => !row.classList.contains("hidden-publication"),
+          );
+
+          if (visibleRows.length > 0) {
+            visibleRows[visibleRows.length - 1].classList.add(
+              "last-visible-publication",
+            );
+          }
+        });
+      }
+
+      function updateYearVisibility() {
+        yearSections.forEach((section) => {
+          const visibleRows = section.querySelectorAll(
+            ".pub-row:not(.hidden-publication)",
+          );
+
+          section.hidden = visibleRows.length === 0;
+        });
+      }
 
       filterButtons.forEach((button) => {
         button.addEventListener("click", () => {
           const selectedFilter = button.dataset.filter;
 
-          filterButtons.forEach((item) => item.classList.remove("active"));
-          button.classList.add("active");
+          filterButtons.forEach((item) => {
+            const active = item === button;
+
+            item.classList.toggle("active", active);
+
+            item.setAttribute("aria-pressed", active ? "true" : "false");
+          });
 
           publicationRows.forEach((row) => {
-            const categories = row.dataset.category || "";
+            const categories = (row.dataset.category || "")
+              .split(/\s+/)
+              .filter(Boolean);
 
-            if (
-              selectedFilter === "all" ||
-              categories.includes(selectedFilter)
-            ) {
-              row.classList.remove("hidden-publication");
-            } else {
-              row.classList.add("hidden-publication");
-            }
+            const show =
+              selectedFilter === "all" || categories.includes(selectedFilter);
+
+            row.classList.toggle("hidden-publication", !show);
           });
 
-          yearSections.forEach((section) => {
-            const visibleRows = section.querySelectorAll(
-              ".pub-row:not(.hidden-publication)",
-            );
+          updateYearVisibility();
 
-            if (visibleRows.length === 0) {
-              section.style.display = "none";
-            } else {
-              section.style.display = "block";
-            }
+          updateLastVisiblePublications();
+        });
+      });
+
+      updateLastVisiblePublications();
+    </script>
+
+    <!-- =====================================================
+         IMAGE POPUP
+         This is intentionally the same mechanism as index.html.
+         ===================================================== -->
+
+    <script>
+      const imageLinks = document.querySelectorAll(".image-link");
+
+      const imageOverlays = document.querySelectorAll(".image-overlay");
+
+      const publicationsSection = document.getElementById("publications");
+
+      function getOverlayFromLink(link) {
+        const target = link.getAttribute("href");
+
+        if (!target || !target.startsWith("#")) {
+          return null;
+        }
+
+        try {
+          const overlay = document.querySelector(target);
+
+          return overlay?.classList.contains("image-overlay") ? overlay : null;
+        } catch {
+          return null;
+        }
+      }
+
+      function closeImageOverlay(overlay) {
+        if (!overlay) {
+          return;
+        }
+
+        overlay.classList.add("image-overlay-closing");
+
+        if (window.location.hash) {
+          history.replaceState(
+            null,
+            "",
+            window.location.pathname + window.location.search,
+          );
+        }
+
+        requestAnimationFrame(() => {
+          publicationsSection?.focus({
+            preventScroll: true,
           });
         });
+      }
+
+      imageLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          const overlay = getOverlayFromLink(link);
+
+          if (!overlay) {
+            return;
+          }
+
+          overlay.classList.remove("image-overlay-closing");
+
+          requestAnimationFrame(() => {
+            const closeButton = overlay.querySelector("button.close-overlay");
+
+            closeButton?.focus({
+              preventScroll: true,
+            });
+          });
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        const closeButton = event.target.closest("button.close-overlay");
+
+        if (closeButton) {
+          event.preventDefault();
+
+          event.stopPropagation();
+
+          const overlay = closeButton.closest(".image-overlay");
+
+          closeImageOverlay(overlay);
+
+          return;
+        }
+
+        const overlay = event.target.closest(".image-overlay");
+
+        if (overlay && event.target === overlay) {
+          closeImageOverlay(overlay);
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key !== "Escape") {
+          return;
+        }
+
+        const openOverlay = Array.from(imageOverlays).find(
+          (overlay) =>
+            window.getComputedStyle(overlay).display !== "none" &&
+            !overlay.classList.contains("image-overlay-closing"),
+        );
+
+        if (openOverlay) {
+          event.preventDefault();
+
+          closeImageOverlay(openOverlay);
+        }
       });
     </script>
   </body>

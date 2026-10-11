@@ -4,132 +4,973 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Research Projects | Rudaiba Adnin</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
 
-    <!-- Google Font: Raleway -->
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-    />
 
-    <link rel="stylesheet" href="./style.css?v=2" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
     <header class="topbar">
       <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-btn">Menu</label>
 
-      <label for="menu-toggle" class="menu-btn"> Menu </label>
-
-      <nav class="nav">
+      <nav class="nav" aria-label="Main navigation">
         <a href="index.html#about">About</a>
-        <a href="index.html#publications">Publications</a>
-        <a href="research-projects.html" class="active">Research Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="research_projects.html" class="active" aria-current="page">
+          Research Projects
+        </a>
         <a target="_blank" href="publications/CV_RUDAIBA_ADNIN.pdf">CV</a>
       </nav>
     </header>
 
-    <main class="page">
-      <section class="research-projects">
-        <h1 class="page-bold-text">Research Projects</h1>
-
-        <p class="role">
-          My research explores how accessible, collaborative, and AI-powered
-          technologies can support disabled people, especially blind and
-          low-vision learners.
+    <main class="page research-projects-page">
+      <section
+        class="research-page-intro"
+        aria-labelledby="research-page-title"
+      >
+        <h1 id="research-page-title" class="page-bold-text">
+          Research Projects
+        </h1>
+        <p class="research-lead">
+          My research examines how emerging AI technologies can be made more
+          accessible, understandable, and useful for people with different
+          access needs. My current work centers on
+          <strong class="research-intro-highlight research-intro-ai"
+            >AI and Accessibility</strong
+          >,
+          <strong class="research-intro-highlight research-intro-disclosure"
+            >GenAI Use in Mainstream Academic Work</strong
+          >, and
+          <strong class="research-intro-highlight research-intro-neuro"
+            >Neurodivergence and Language Learning</strong
+          >.
         </p>
 
-        <div class="research-video">
-          <video
-            autoplay
-            loop
-            muted
-            playsinline
-            aria-label="Research field animation"
+        <div class="research-topic-cards" aria-label="Research areas">
+          <button
+            class="research-topic-card research-topic-card-ai"
+            type="button"
+            data-open-research-modal="aiAccessibilityModal"
+            aria-haspopup="dialog"
+            aria-controls="aiAccessibilityModal"
           >
-            <source src="researchfield.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+            <span class="research-topic-tab">AI and Accessibility</span>
+            <span class="research-topic-body">
+              <span>
+                How blind people use and make sense of GenAI systems, and how
+                teachers working with blind and low vision (BLV) students
+                integrate these tools into their pedagogical practices.
+              </span>
+              <span class="research-topic-action">
+                View project
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </span>
+          </button>
+
+          <button
+            class="research-topic-card research-topic-card-disclosure"
+            type="button"
+            data-open-research-modal="genaiDisclosureModal"
+            aria-haspopup="dialog"
+            aria-controls="genaiDisclosureModal"
+          >
+            <span class="research-topic-tab"
+              >GenAI Use in Mainstream Academic Work</span
+            >
+            <span class="research-topic-body">
+              <span>
+                How students decide when to hide or disclose GenAI use in
+                academic work, and how teachers respond to non-disclosure.
+              </span>
+              <span class="research-topic-action">
+                View project
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </span>
+          </button>
+
+          <button
+            class="research-topic-card research-topic-card-neuro"
+            type="button"
+            data-open-research-modal="neuroLanguageModal"
+            aria-haspopup="dialog"
+            aria-controls="neuroLanguageModal"
+          >
+            <span class="research-topic-tab">
+              Neurodivergence and Language Learning
+            </span>
+            <span class="research-topic-body">
+              <span>
+                How Chinese neurodivergent individuals navigate English-as-L2 in
+                academic and professional settings.
+              </span>
+              <span class="research-topic-action">
+                View project
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="research-project-section"
+        id="ai-accessibility"
+        aria-labelledby="ai-accessibility-title"
+      >
+        <div class="research-project-heading">
+          <h2 id="ai-accessibility-title" tabindex="0">AI and Accessibility</h2>
         </div>
 
-        <article class="pub-row">
-          <div></div>
-
-          <div class="pub-info">
+        <div class="research-project-layout">
+          <div class="research-project-copy" tabindex="0">
             <p>
-              <span class="page-bold-text">
-                Accessible GenAI Tools for Blind and Low-Vision Users
-              </span>
+              The proliferation of Generative Artificial Intelligence (GenAI)
+              tools has brought a critical shift in how people approach
+              information retrieval and content creation in diverse contexts.
+              Yet, we have limited understanding of how blind people use and
+              make sense of GenAI systems. This research examines how blind
+              people incorporate GenAI tools into everyday practices, navigate
+              accessibility issues, inaccuracies, hallucinations, and biases,
+              and develop mental models of how these systems work.
             </p>
 
             <p>
-              This project studies how blind and low-vision people use,
-              understand, and evaluate Generative AI tools in everyday life,
-              learning, and accessibility-related tasks.
+              Generative Artificial Intelligence (GenAI) tools are also
+              reshaping the educational landscape; yet, how teachers working
+              with blind and low-vision (BLV) students integrate these tools
+              into their pedagogical practices remains underexplored. This
+              research examines how teachers of BLV students use GenAI in their
+              instructional practices and how they educate BLV students about
+              these tools. Teachers leveraged GenAI for personalized lesson
+              planning and tasks specific to BLV education, while addressing
+              biased GenAI responses favoring sighted teaching methods.
             </p>
 
-            <div class="pub-buttons">
-              <a href="index.html#publications">Related Publications</a>
+            <div class="research-questions">
+              <h3>Current questions</h3>
+              <ol class="research-question-list">
+                <li>
+                  How do blind people use GenAI tools and for what purposes?
+                </li>
+                <li>
+                  What mental models do blind people develop to make sense of
+                  GenAI tools?
+                </li>
+                <li>
+                  How do these teachers educate their BLV students about GenAI
+                  (e.g., common use cases, errors, and risks)?
+                </li>
+              </ol>
             </div>
           </div>
-        </article>
 
-        <article class="pub-row">
-          <div></div>
+          <div
+            class="research-visual-column"
+            aria-label="AI and Accessibility project visuals"
+          >
+            <figure class="research-visual research-visual-large">
+              <img
+                src="publication-images/accessible-ai-literacy.png"
+                alt="Collage illustrating accessible AI literacy research with examples of generative AI use and accessibility in blind and low-vision education."
+              />
+              <figcaption>
+                Accessible AI literacy and generative AI use in BLV education.
+              </figcaption>
+            </figure>
 
-          <div class="pub-info">
-            <p>
-              <span class="page-bold-text">
-                Game-Based AI Literacy for Blind and Low-Vision Students
-              </span>
-            </p>
+            <div class="research-visual-grid">
+              <figure class="research-visual">
+                <img
+                  src="publication-images/mental-model.png"
+                  alt="Research preview showing examples used to study how blind people interact with and form mental models of generative AI tools."
+                />
+                <figcaption>
+                  How blind people use and understand generative AI.
+                </figcaption>
+              </figure>
 
-            <p>
-              This project focuses on designing accessible learning activities
-              that help blind and low-vision students understand AI mistakes,
-              bias, hallucinations, and responsible AI use.
-            </p>
-
-            <div class="pub-buttons">
-              <a href="index.html#publications">Related Publications</a>
+              <figure class="research-visual">
+                <img
+                  src="publication-images/kanak.png"
+                  alt="Screenshot of Kanak, an accessible tool for creating and editing STEM learning materials for blind and low-vision students."
+                />
+                <figcaption>
+                  Accessible STEM material creation with Kanak.
+                </figcaption>
+              </figure>
             </div>
           </div>
-        </article>
+        </div>
 
-        <article class="pub-row">
-          <div></div>
-
-          <div class="pub-info">
-            <p>
-              <span class="page-bold-text">
-                Accessible STEM Learning Materials
-              </span>
-            </p>
-
-            <p>
-              This project explores how technology can support the creation of
-              accessible STEM materials for blind and low-vision students,
-              including tactile, text-based, and AI-assisted formats.
-            </p>
-
-            <div class="pub-buttons">
-              <a href="index.html#publications">Related Publications</a>
-            </div>
+        <div class="research-publications-block">
+          <div class="research-subsection-heading">
+            <h3>Relevant Publications</h3>
           </div>
-        </article>
+
+          <div
+            class="research-publication-list index-style-publications"
+            id="aiPublicationList"
+            data-visible-count="2"
+          >
+            <article class="pub-row" data-category="genai">
+              <div class="pub-info">
+                <p>
+                  <a
+                    href="publications/BLV_AI_literacy_ASSETS26.pdf"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Towards Accessible AI Literacy: Investigating How Teachers
+                    of Blind and Low-Vision Students Integrate Generative AI in
+                    Pedagogical Practices
+                  </a>
+                </p>
+
+                <p>
+                  <span class="page-bold-text">Rudaiba Adnin,</span> Abir Saha,
+                  and Maitraye Das. 2026.
+                </p>
+
+                <p>
+                  Proceedings of the 28th International ACM SIGACCESS Conference
+                  on Computers and Accessibility (ASSETS '26)
+                </p>
+
+                <div class="pub-buttons">
+                  <a
+                    href="publications/BLV_AI_literacy_ASSETS26.pdf"
+                    rel="noopener"
+                    target="_blank"
+                    >PDF</a
+                  >
+
+                  <a
+                    href="https://doi.org/10.1145/3797867.3829007"
+                    rel="noopener"
+                    target="_blank"
+                    >DOI</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="pub-row" data-category="genai">
+              <div class="pub-info">
+                <p>
+                  <a
+                    href="https://dl.acm.org/doi/10.1145/3764687.3764694"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Kanak: Automating the Generation of Accessible STEM
+                    Materials for Blind and Low-vision Students.
+                  </a>
+                </p>
+
+                <p>
+                  Hari Prasath Palani,
+                  <span class="page-bold-text">Rudaiba Adnin</span>, and
+                  Shivangee Nagar. 2025.
+                </p>
+
+                <p>
+                  Proceedings of the 37th Australian Conference on
+                  Human-Computer Interaction (OzCHI ’25)
+                </p>
+
+                <div class="pub-buttons">
+                  <a
+                    href="publications/Kanak-OzCHI-2025-Camera-ready.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    >PDF</a
+                  >
+
+                  <a
+                    href="https://dl.acm.org/doi/10.1145/3764687.3764694"
+                    target="_blank"
+                    rel="noopener"
+                    >DOI</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="pub-row" data-category="genai">
+              <div class="pub-info">
+                <p>
+                  <a
+                    href="https://dl.acm.org/doi/10.1145/3663548.3675631"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    “I look at it as the king of knowledge”: How Blind People
+                    Use and Understand Generative AI Tools.
+                  </a>
+                </p>
+
+                <p>
+                  <span class="page-bold-text">Rudaiba Adnin</span> and Maitraye
+                  Das. 2024.
+                </p>
+
+                <p>
+                  Proceedings of the 26th International ACM SIGACCESS Conference
+                  on Computers and Accessibility (ASSETS ’24)
+                </p>
+
+                <div class="pub-buttons">
+                  <a
+                    href="publications/BLV_UsageGenAI_ASSETS2024.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    >PDF</a
+                  >
+
+                  <a
+                    href="https://dl.acm.org/doi/10.1145/3663548.3675631"
+                    target="_blank"
+                    rel="noopener"
+                    >DOI</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <button
+            class="research-publications-toggle"
+            type="button"
+            data-publication-toggle="aiPublicationList"
+            aria-expanded="false"
+            aria-controls="aiPublicationList"
+          >
+            <span>See more</span>
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
       </section>
+
+      <section
+        class="research-project-section"
+        id="genai-disclosure"
+        aria-labelledby="genai-disclosure-title"
+      >
+        <div class="research-project-heading">
+          <h2 id="genai-disclosure-title" tabindex="0">
+            GenAI Use in Mainstream Academic Work
+          </h2>
+        </div>
+
+        <div class="research-project-layout research-project-layout-disclosure">
+          <div class="research-project-copy" tabindex="0">
+            <p>
+              This research examines how students decide whether to disclose
+              their use of generative AI in academic work and how teachers
+              interpret and respond to undisclosed use.
+            </p>
+
+            <p>
+              Through an online survey with 97 college students, interviews with
+              fifteen students, and interviews with nine teachers, this work
+              investigates students’ strategies for hiding GenAI use, their
+              justifications for non-disclosure, and teachers’ strategies for
+              managing it. We use cognitive dissonance as a lens for
+              understanding these choices and consider how higher education can
+              promote greater transparency around GenAI use.
+            </p>
+
+            <div class="research-questions">
+              <h3>Current questions</h3>
+              <ol class="research-question-list">
+                <li>
+                  When, why, and how do college students hide or disclose their
+                  use of GenAI in academic work?
+                </li>
+                <li>
+                  How do teachers recognize and respond to students’ undisclosed
+                  use of GenAI?
+                </li>
+                <li>
+                  How can higher education support more transparent and
+                  responsible disclosure practices around GenAI use?
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="research-visual-column">
+            <figure
+              class="research-visual research-visual-feature research-visual-disclosure"
+            >
+              <img
+                src="publication-images/undisclosed-use.png"
+                alt="Preview image for research on student and teacher perspectives on undisclosed use of generative AI in academic work."
+              />
+              <figcaption>
+                GenAI use, non-disclosure, and transparency in mainstream
+                academic work.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="research-publications-block">
+          <div class="research-subsection-heading">
+            <h3>Relevant Publication</h3>
+          </div>
+
+          <div
+            class="research-publication-list index-style-publications"
+            id="disclosurePublicationList"
+            data-visible-count="2"
+          >
+            <article class="pub-row" data-category="genai">
+              <div class="pub-info">
+                <p>
+                  <a
+                    href="https://dl.acm.org/doi/10.1145/3706598.3713393"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Examining Student and Teacher Perspectives on Undisclosed
+                    Use of Generative AI in Academic Work.
+                  </a>
+                </p>
+
+                <p>
+                  <span class="page-bold-text">Rudaiba Adnin</span>, Atharva
+                  Pandkar, Bingsheng Yao, Dakuo Wang, and Maitraye Das. 2025.
+                </p>
+
+                <p>
+                  Proceedings of the 2025 CHI Conference on Human Factors in
+                  Computing Systems (CHI ’25)
+                </p>
+
+                <div class="pub-buttons">
+                  <a
+                    href="publications/GenAI_Academic_Work_CHI25.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    >PDF</a
+                  >
+
+                  <a
+                    href="https://dl.acm.org/doi/10.1145/3706598.3713393"
+                    target="_blank"
+                    rel="noopener"
+                    >DOI</a
+                  >
+
+                  <a
+                    href="https://fortune.com/2026/05/19/college-students-booing-commencement-speakers-ai-cheating-cognitive-dissonance/"
+                    target="_blank"
+                    rel="noopener"
+                    >Media Coverage</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="research-project-section"
+        id="neurodivergence-language"
+        aria-labelledby="neurodivergence-language-title"
+      >
+        <div class="research-project-heading">
+          <h2 id="neurodivergence-language-title" tabindex="0">
+            Neurodivergence and Language Learning
+          </h2>
+        </div>
+
+        <div class="research-project-layout">
+          <div class="research-project-copy" tabindex="0">
+            <p>
+              Neurodivergent individuals face various barriers in academic and
+              professional settings. Parallelly, English as second language (L2)
+              speakers encounter distinct challenges when English is the medium
+              of work and evaluation. Yet HCI has paid little attention to the
+              intersection of these identities, where the demands of
+              English-as-L2 use and neurodivergent cognition can magnify.
+            </p>
+
+            <p>
+              Through interviews with 19 Chinese students and professionals with
+              ADHD, dyslexia, or dysgraphia, we found that cognitive processing
+              strengths in Chinese became difficulties when applied to English,
+              task-level demands compressed attentional resources, technologies
+              both supported and constrained access needs, and authority and
+              institutional contexts determined which access strategies were
+              viable. We develop compounded access as an analytic framing to
+              document the strategies participants developed and the frictions
+              they encountered at the intersection of neurodivergence and L2.
+            </p>
+
+            <div class="research-questions">
+              <h3>Current questions</h3>
+              <ol class="research-question-list">
+                <li>
+                  What strategies do Chinese neurodivergent individuals develop
+                  to learn and use English, and what relational and
+                  institutional contexts shape which strategies are viable?
+                </li>
+                <li>
+                  Whether, what, and how do technologies mitigate or amplify the
+                  barriers Chinese neurodivergent individuals encounter?
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="research-visual-column">
+            <figure class="research-visual research-visual-feature">
+              <img
+                src="publication-images/compounded-access.png"
+                alt="Research preview for Compounded Access, a study of how Chinese neurodivergent students and professionals navigate English as a second language."
+              />
+              <figcaption>
+                Compounded Access: neurodivergence and English as a second
+                language.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="research-publications-block">
+          <div class="research-subsection-heading">
+            <h3>Relevant Publication</h3>
+          </div>
+
+          <div
+            class="research-publication-list index-style-publications"
+            id="ndPublicationList"
+            data-visible-count="2"
+          >
+            <article class="pub-row" data-category="genai">
+              <div class="pub-info">
+                <p>
+                  <a
+                    href="publications/ND_L2_speakers_ASSETS26.pdf"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    Compounded Access: How Chinese Neurodivergent Students and
+                    Professionals Navigate English as a Second Language
+                  </a>
+                </p>
+
+                <p>
+                  Qiushi Liang,
+                  <span class="page-bold-text">Rudaiba Adnin,</span> and
+                  Maitraye Das. 2026.
+                </p>
+
+                <p>
+                  Proceedings of the 28th International ACM SIGACCESS Conference
+                  on Computers and Accessibility (ASSETS '26)
+                </p>
+
+                <div class="pub-buttons">
+                  <a
+                    href="publications/ND_L2_speakers_ASSETS26.pdf"
+                    rel="noopener"
+                    target="_blank"
+                    >PDF</a
+                  >
+
+                  <a
+                    href="https://doi.org/10.1145/3797867.3829052"
+                    rel="noopener"
+                    target="_blank"
+                    >DOI</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <dialog
+        class="research-detail-modal research-detail-modal-ai"
+        id="aiAccessibilityModal"
+        aria-labelledby="aiAccessibilityModalTitle"
+      >
+        <div class="research-modal-shell">
+          <button
+            class="research-modal-close"
+            type="button"
+            data-close-research-modal
+            aria-label="Close AI and Accessibility project overview"
+          >
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+
+          <div class="research-modal-title-tab">
+            <h2 id="aiAccessibilityModalTitle">AI and Accessibility</h2>
+          </div>
+
+          <div class="research-modal-card">
+            <div class="research-modal-body research-modal-body-studies">
+              <div class="research-modal-study">
+                <div class="research-modal-study-heading">
+                  <span class="research-modal-study-number">01</span>
+                  <h3>GenAI in BLV Education</h3>
+                </div>
+                <p class="research-modal-exact-text">
+                  Generative Artificial Intelligence (GenAI) tools are reshaping
+                  the educational landscape; yet, how teachers working with
+                  blind and low vision (BLV) students integrate these tools into
+                  their pedagogical practices remains underexplored. To address
+                  this gap, we interviewed 17 teachers of BLV students to
+                  investigate how they leverage GenAI to fulfill their teaching
+                  responsibilities and educate BLV students about these tools.
+                  We found that teachers incorporated GenAI for personalized
+                  lesson planning and tasks specific to BLV education, while
+                  counteracting biases favoring sighted teaching methods. They
+                  addressed BLV students’ curiosity and concerns about GenAI and
+                  taught them prompt formulation strategies that support their
+                  access needs in academic and daily tasks, although
+                  occasionally perpetuating their own misconceptions about GenAI
+                  to students. They expressed concerns about students’
+                  overreliance on GenAI lowering foundational
+                  accessibility-related skills. We discuss ways to promote
+                  accessible AI literacy and outline design considerations for
+                  incorporating GenAI to support teachers’ BLV-specific
+                  instructional responsibilities and for integrating GenAI
+                  responsibly in BLV education.
+                </p>
+              </div>
+
+              <div class="research-modal-study">
+                <div class="research-modal-study-heading">
+                  <span class="research-modal-study-number">02</span>
+                  <h3>Kanak: Accessible STEM Material Creation</h3>
+                </div>
+                <p class="research-modal-exact-text">
+                  Blind and low-vision (BLV) students face significant barriers
+                  to timely access of visual STEM materials. Accessibility
+                  practitioners, such as braille transcribers and teachers of
+                  the visually impaired (TVIs), rely on manual and
+                  labor-intensive processes to produce accessible formats (e.g.,
+                  braille, tactile graphics) of visual educational materials. To
+                  complement this effort and address ongoing accessibility gaps,
+                  we developed Kanak, an AI system that leverages generative
+                  intelligence to automate the generation of accessible STEM
+                  content, including text, math equations, and graphics. Through
+                  a comparative study with seven practitioners, we examined how
+                  Kanak supports traditional transcribing workflows and augments
+                  expert judgment. Our findings reveal how generative tools
+                  could complement practitioner expertise by providing
+                  context-aware formatting, proofreading support, and on-demand
+                  graphics generation. We conclude with design considerations
+                  for human-AI collaboration in transcribing work, positioning
+                  generative intelligence not as a replacement for expert
+                  insights, but as a catalyst for expanding equitable access.
+                </p>
+              </div>
+
+              <div class="research-modal-study">
+                <div class="research-modal-study-heading">
+                  <span class="research-modal-study-number">03</span>
+                  <h3>How Blind People Use and Understand GenAI</h3>
+                </div>
+                <p class="research-modal-exact-text">
+                  The proliferation of Generative Artificial Intelligence
+                  (GenAI) tools has brought a critical shift in how people
+                  approach information retrieval and content creation in diverse
+                  contexts. Yet, we have limited understanding of how blind
+                  people use and make sense of GenAI systems. To bridge this
+                  gap, we report findings from interviews with 19 blind
+                  individuals who incorporate mainstream GenAI tools like
+                  ChatGPT and Be My AI in their everyday practices. Our findings
+                  reveal how blind users navigate accessibility issues,
+                  inaccuracies, hallucinations, and idiosyncracies associated
+                  with GenAI and develop interesting (but often flawed) mental
+                  models of how these tools work. We discuss key considerations
+                  for rethinking access and information verification in GenAI
+                  tools, unpacking erroneous mental models among blind users,
+                  and reconciling harms and benefits of GenAI from an
+                  accessibility perspective.
+                </p>
+              </div>
+
+              <div
+                class="research-modal-section research-modal-questions-section"
+              >
+                <h3>Current questions</h3>
+                <ol class="research-modal-question-list">
+                  <li>
+                    How do blind people use GenAI tools and for what purposes?
+                  </li>
+                  <li>
+                    What mental models do blind people develop to make sense of
+                    GenAI tools?
+                  </li>
+                  <li>
+                    How do these teachers educate their BLV students about GenAI
+                    (e.g., common use cases, errors, and risks)?
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog
+        class="research-detail-modal research-detail-modal-disclosure"
+        id="genaiDisclosureModal"
+        aria-labelledby="genaiDisclosureModalTitle"
+      >
+        <div class="research-modal-shell">
+          <button
+            class="research-modal-close"
+            type="button"
+            data-close-research-modal
+            aria-label="Close GenAI Use in Mainstream Academic Work project overview"
+          >
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+
+          <div class="research-modal-title-tab">
+            <h2 id="genaiDisclosureModalTitle">
+              GenAI Use in Mainstream Academic Work
+            </h2>
+          </div>
+
+          <div class="research-modal-card">
+            <div class="research-modal-body research-modal-body-studies">
+              <div class="research-modal-study">
+                <div class="research-modal-study-heading">
+                  <span class="research-modal-study-number">01</span>
+                  <h3>Undisclosed Use of GenAI in Academic Work</h3>
+                </div>
+
+                <p class="research-modal-exact-text">
+                  With the widespread adoption of Generative Artificial
+                  Intelligence (GenAI) tools, ethical issues are being raised
+                  around the disclosure of their use in publishing, journalism,
+                  or artwork. Recent research has found that college students
+                  are increasingly using GenAI tools; however, we know less
+                  about when, why, and how they choose to hide or disclose their
+                  use of GenAI in academic work. To address this gap, we
+                  conducted an online survey (n=97) and interviews with fifteen
+                  college students followed by interviews with nine teachers who
+                  had experience with students’ undisclosed use of GenAI. Our
+                  findings elucidate the strategies students employ to hide
+                  their GenAI use and their justifications for doing so,
+                  alongside the strategies teachers follow to manage such
+                  non-disclosure. We unpack students’ non-disclosure of GenAI
+                  through the lens of cognitive dissonance and discuss practical
+                  considerations for teachers and students regarding ways to
+                  promote transparency in GenAI use in higher education.
+                </p>
+              </div>
+
+              <div
+                class="research-modal-section research-modal-questions-section"
+              >
+                <h3>Current questions</h3>
+                <ol class="research-modal-question-list">
+                  <li>
+                    When, why, and how do students hide or disclose their use of
+                    GenAI in academic work?
+                  </li>
+                  <li>
+                    How do teachers manage and respond to students’
+                    non-disclosure of GenAI use?
+                  </li>
+                  <li>
+                    What practices can promote greater transparency around GenAI
+                    use in higher education?
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog
+        class="research-detail-modal research-detail-modal-neuro"
+        id="neuroLanguageModal"
+        aria-labelledby="neuroLanguageModalTitle"
+      >
+        <div class="research-modal-shell">
+          <button
+            class="research-modal-close"
+            type="button"
+            data-close-research-modal
+            aria-label="Close Neurodivergence and Language Learning project overview"
+          >
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+
+          <div class="research-modal-title-tab">
+            <h2 id="neuroLanguageModalTitle">
+              Neurodivergence and Language Learning
+            </h2>
+          </div>
+
+          <div class="research-modal-card">
+            <div class="research-modal-body research-modal-body-studies">
+              <div class="research-modal-study">
+                <div class="research-modal-study-heading">
+                  <span class="research-modal-study-number">01</span>
+                  <h3>Compounded Access</h3>
+                </div>
+                <p class="research-modal-exact-text">
+                  Neurodivergent individuals face various barriers in academic
+                  and professional settings. Parallelly, English as second
+                  language (L2) speakers encounter distinct challenges when
+                  English is the medium of work and evaluation. Yet HCI has paid
+                  little attention to the intersection of these identities,
+                  where the demands of English-as-L2 use and neurodivergent
+                  cognition can magnify. Through interviews with 19 Chinese
+                  students and professionals with ADHD, dyslexia, or dysgraphia,
+                  we found that cognitive processing strengths in Chinese became
+                  difficulties when applied to English, task-level demands
+                  compressed attentional resources, technologies both supported
+                  and constrained access needs, and authority and institutional
+                  contexts determined which access strategies were viable. We
+                  develop compounded access as an analytic framing to document
+                  the strategies participants developed and the frictions they
+                  encountered at the intersection of neurodivergence and L2, and
+                  outline design considerations to support neurodivergent
+                  individuals learning, communicating, and working in English as
+                  a second language.
+                </p>
+              </div>
+
+              <div
+                class="research-modal-section research-modal-questions-section"
+              >
+                <h3>Current questions</h3>
+                <ol class="research-modal-question-list">
+                  <li>
+                    What strategies do Chinese neurodivergent individuals
+                    develop to learn and use English, and what relational and
+                    institutional contexts shape which strategies are viable?
+                  </li>
+                  <li>
+                    Whether, what, and how do technologies mitigate or amplify
+                    the barriers Chinese neurodivergent individuals encounter?
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
     </main>
+
+    <script>
+      const researchModalTriggers = document.querySelectorAll(
+        "[data-open-research-modal]",
+      );
+      const researchModals = document.querySelectorAll(
+        ".research-detail-modal",
+      );
+
+      researchModalTriggers.forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          const modal = document.getElementById(
+            trigger.dataset.openResearchModal,
+          );
+
+          if (modal) {
+            modal.showModal();
+            document.body.classList.add("research-modal-open");
+          }
+        });
+      });
+
+      researchModals.forEach((modal) => {
+        const closeButton = modal.querySelector("[data-close-research-modal]");
+
+        closeButton?.addEventListener("click", () => {
+          modal.close();
+        });
+
+        modal.addEventListener("close", () => {
+          document.body.classList.remove("research-modal-open");
+        });
+
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            modal.close();
+          }
+        });
+      });
+    </script>
+
+    <script>
+      document
+        .querySelectorAll("[data-publication-toggle]")
+        .forEach((button) => {
+          const listId = button.dataset.publicationToggle;
+          const list = document.getElementById(listId);
+          const items = Array.from(list.querySelectorAll(".pub-row"));
+          const visibleCount = Number(list.dataset.visibleCount || 2);
+          const label = button.querySelector("span");
+          const icon = button.querySelector("i");
+
+          function collapseList() {
+            items.forEach((item, index) => {
+              item.hidden = index >= visibleCount;
+            });
+
+            label.textContent = "See more";
+            button.setAttribute("aria-expanded", "false");
+            icon.classList.remove("fa-chevron-up");
+            icon.classList.add("fa-chevron-down");
+          }
+
+          function expandList() {
+            items.forEach((item) => {
+              item.hidden = false;
+            });
+
+            label.textContent = "See less";
+            button.setAttribute("aria-expanded", "true");
+            icon.classList.remove("fa-chevron-down");
+            icon.classList.add("fa-chevron-up");
+          }
+
+          if (items.length <= visibleCount) {
+            button.hidden = true;
+          } else {
+            collapseList();
+
+            button.addEventListener("click", () => {
+              const expanded = button.getAttribute("aria-expanded") === "true";
+              expanded ? collapseList() : expandList();
+            });
+          }
+        });
+    </script>
   </body>
 </html>
